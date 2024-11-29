@@ -101,7 +101,7 @@ params:
         hiddenInList: false
         hiddenInSingle: true
     label:
-      text: "Moritz-Maria von Igelfeld"
+      text: "w6rst"
       icon: favicon.ico
       iconHeight: 18
 
@@ -116,7 +116,7 @@ markup:
         endLevel: 2
         ordered: false
         startLevel: 2
-title: Moritz-Maria von Igelfeld
+title: w6rst
 theme: PaperMod
 
 enableInlineShortcodes: true
@@ -145,7 +145,7 @@ menu:
 
 params:
     description: "I am a Professor of Philology at the Institute of Romance Philology in Regensburg, Germany. My research focuses mostly on Portuguese irregular verbs."
-    author: Moritz-Maria von Igelfeld
+    author: w6rst
     # googleAnalyticsID: "G-XXXXX"
     DateFormat: "January 2006"
     defaultTheme: light
@@ -169,8 +169,8 @@ params:
     math: true
     profileMode:
           enabled: true
-          title: Professor Dr von Igelfeld
-          subtitle: "I am a Professor in the Institute of Romance Philology at the University of Regensburg, Germany. My research focuses on Portuguese irregular verbs. I was a doctoral student of Professor Dr Dieter Vogelsang in Munich, and later a second assistant of Professor Walter Schoeffler-Henschell at the University of Wiesbaden."
+          title: w6rst
+          subtitle: ""
           imageUrl: "picture.jpeg"
           imageWidth: 160
           imageHeight: 160
@@ -218,7 +218,7 @@ params:
         hiddenInList: false
         hiddenInSingle: true
     label:
-      text: "Moritz-Maria von Igelfeld"
+      text: "w6rst"
       icon: favicon.ico
       iconHeight: 18
 
