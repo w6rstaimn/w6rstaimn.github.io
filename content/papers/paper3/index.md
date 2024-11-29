@@ -1,53 +1,127 @@
 ---
-title: "Your Inner Hedgehog" 
-date: 2021-04-06
-lastmod: 2024-10-18
-tags: ["social psychology","inner hedgehog","academia","experimental psychology","invasive thoughts"]
-author: ["Hilda Schreiber-Ziegler", "Moritz-Maria von Igelfeld"]
-description: "This paper describes the inner hedgehog, a psychological condition widespread in academia. Published in the Journal of Socio-Experimental Psychology, 2021." 
-summary: "Using several case studies, this paper describes the inner hedgehog, a psychological condition widespread in academic occupations. The condition has lasting consequences and no known cure." 
+title: "Install VMWare Workstation Player and Kali Linux  Setup" 
+date: 2024-11-29
+lastmod: 2024-11-29
+#tags: ["social psychology","inner hedgehog","academia","experimental psychology","invasive thoughts"]
+author: ["Aiman Husni"]
+summary: "In this guide, we’ll walk you through the steps to install Kali Linux in VMware, ensuring a smooth and efficient setup process" 
 cover:
     image: "paper3.png"
     alt: "Vizualisation of an inner hedgehog"
     relative: false
 editPost:
-    URL: "https://github.com/pmichaillat/hugo-website"
-    Text: "Journal of Socio-Experimental Psychology"
+    URL: ""
+    Text: ""
+---
+
+# Install VMWare Workstation Player and Kali Linux  Setup
 
 ---
 
----
-
-##### Download
-
-+ [Paper](paper3.pdf)
-+ [Raw data](https://github.com/pmichaillat/recession-indicator)
+Hello guys! This is tutorial to setup kali linux in your host(laptop) without uninstalling your windows. 
 
 ---
 
-##### Abstract
+### 1. Download WinRAR at the following site based on your Windows version (32-bit or 64-bit) and install WinRAR program.
 
-Using several case studies, this paper describes the inner hedgehog, a psychological condition widespread in academic occupations. The condition has lasting consequences and no known cure. Mauris tincidunt quam a libero consequat, nec pharetra nunc tristique. Pellentesque eget ipsum ut dui laoreet congue ut nec nulla. Nulla facilisi. Sed consequat, odio ac aliquet tempor, turpis augue auctor mauris, at malesuada sem dolor eget libero. Nullam iaculis malesuada risus, id fringilla quam sagittis ac. Fusce congue vel ex et facilisis. Integer volutpat eros ut urna efficitur, id efficitur sapien pharetra.
-
----
-
-##### Citation
-
-Schreiber-Ziegler, Hilda, and Moritz-Maria von Igelfeld. 2021. "Your Inner Hedgehog." *Journal of Socio-Experimental Psychology* 131 (2): 1299–1302.
-
-```BibTeX
-@article{SZI21,
-author = {Hilda Schreiber-Ziegler and Moritz-Maria von Igelfeld},
-year = {2021},
-title ={Your Inner Hedgehog},
-journal = {Journal of Socio-Experimental Psychology},
-volume = {131},
-number = {2},
-pages = {1299--1302}}
-```
+WinRAR Link : [WinRAR](https://www.win-rar.com/download.html?&L=0)
 
 ---
 
-##### Related material
+### 2. Download Kali Linux Image
 
-+ [Nontechnical summary](https://www.alexandermccallsmith.com/book/your-inner-hedgehog)
+Kali Linux Link : [Get Kali | Kali Linux](https://www.kali.org/get-kali/#kali-virtual-machines)
+
+*Make sure you download the one that already pre built for VMware (refer photos below 👇🏿)*
+
+![ff052721-4c19-4993-ad17-ca989a728eeb.png](ff052721-4c19-4993-ad17-ca989a728eeb.png)
+
+Download the VMware one, just click the download (arrow) symbol
+
+---
+
+### 3. Go to the Download Folder (C:\Users\UserName\Downloads)
+
+*Make the Kali folder at the C:\*  
+
+*Move the file (kali-linux-2024.3-vmware-amd64) to the C:\Kali*   
+
+  
+
+![Screenshot 2024-11-13 223929.png](Screenshot_2024-11-13_223929.png)
+
+*Click the file with Mouse right, and then select WinRAR > Extract to “kali-linux”.* 
+
+![Screenshot 2024-11-13 224355.png](Screenshot_2024-11-13_224355.png)
+
+---
+
+### 4. Download VMware Workstation. First, visit the following Google Drive link
+
+Google Drive Link : [VMware Workstation](https://drive.google.com/file/d/1grjM81qPywO2Y-4CprIyU1H3xscb7Ph6/view?usp=drive_link)
+
+*Download -> New tab will appear -> Download anyway*   
+
+![Screenshot 2024-11-13 214843.png](Screenshot_2024-11-13_214843.png)
+
+---
+
+### 5. Install VMWare Workstation Player
+
+*Extract The Downloaded VMWare File & Install  Right click > WinRAR > Extract to “ VMware-workstation”* 
+
+  **
+
+![Screenshot 2024-11-13 222130.png](Screenshot_2024-11-13_222130.png)
+
+*Click "Next," tick the small checkbox, and click "Next" again.*
+
+![Screenshot 2024-11-13 222135.png](Screenshot_2024-11-13_222135.png)
+
+*Tick the small checkbox, “Enhanced Keyboard Driver” and “Add WMware Workstation console” then click "Next" again.*
+
+![Screenshot 2024-11-13 222138.png](Screenshot_2024-11-13_222138.png)
+
+*Click "Next," , and click "Install".*
+
+![Screenshot 2024-11-13 222144.png](dd823bb0-0a4e-4100-aef0-7fd94bb50bbd.png)
+
+*Click "Finish".*
+
+---
+
+### 6. Finish installing and setup the VMware
+
+*Click the VMware installer and just download as always. If it asking you to update you can ignore it first.* 
+
+*If you finish the VMware setup you should see this screen if VMware is open*
+
+![Screenshot 2024-11-13 224700.png](Screenshot_2024-11-13_224700.png)
+
+---
+
+### 7. Import and Run Kali Linux VMWare vmdk file into the VMWare Workstation Player
+
+*Click Open a Virtual Machine > Open, then select the following file “C:\Kali\kali-linux-2024.3-vmware-amd64\kali-linux-2024.3-vmware-amd64.vmwarevm”* 
+
+ 
+
+![Screenshot 2024-11-13 224907.png](Screenshot_2024-11-13_224907.png)
+
+*It will take some time to boot the kali inside the vmware. Just wait until its done. If the boot is done, you will see this screen.*
+
+![Screenshot 2024-11-13 225656.png](Screenshot_2024-11-13_225656.png)
+
+*You can login using this credential :*
+
+*Username : kali*
+
+*Password : kali*
+
+![Screenshot 2024-11-13 225718.png](Screenshot_2024-11-13_225718.png)
+
+*Congratulation mate!* 
+
+---
+
+Thats all! If you have any question do tell in the whatsapp yaaa, thank you!😍
