@@ -31,7 +31,7 @@ params:
     author: w6rst
     # googleAnalyticsID: "G-XXXXX"
     DateFormat: "January 2006"
-    defaultTheme: light
+    defaultTheme: dark
     hideFooter: false
     disableThemeToggle: true
     ShowShareButtons: false
@@ -191,26 +191,26 @@ params:
               url: https://en.wikipedia.org/wiki/Moritz-Maria_von_Igelfeld_(character)
 
     socialIcons:
-        - name: CV
-          url: cv.pdf
-        - name: Email
-          url: mailto:moritz.maria.von.igelfeld@gmail.com
-        - name: Zoom
-          url: https://www.zoom.us/my/igelfeld
-        - name: Location
-          url: location/
-        - name: Office Hours
-          url: officehours/
-        - name: Google Scholar
-          url: https://scholar.google.com/citations?user=cL23w-4AAAAJ
-        - name: GitHub
-          url: https://github.com/pmichaillat
-        - name: Substack
-          url: https://pmichaillat.substack.com
-        - name: YouTube
-          url: https://www.youtube.com/@alexandermccallsmithoffici9000
-        - name: Twitter
-          url: https://twitter.com/McCallSmith
+        #- name: CV
+        #  url: cv.pdf
+        #- name: Email
+        #  url: mailto:moritz.maria.von.igelfeld@gmail.com
+        #- name: Zoom
+        #  url: https://www.zoom.us/my/igelfeld
+        #- name: Location
+        #  url: location/
+        #- name: Office Hours
+        #  url: officehours/
+        #- name: Google Scholar
+        #  url: https://scholar.google.com/citations?user=cL23w-4AAAAJ
+        #- name: GitHub
+        #  url: https://github.com/pmichaillat
+        #- name: Substack
+        #  url: https://pmichaillat.substack.com
+        #- name: YouTube
+        #  url: https://www.youtube.com/@alexandermccallsmithoffici9000
+        #- name: Twitter
+        #  url: https://twitter.com/McCallSmith
 
     assets:
         disableScrollBarStyle: true
