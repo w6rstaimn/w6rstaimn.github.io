@@ -102,7 +102,7 @@ params:
         hiddenInSingle: true
     label:
       text: "w6rst"
-      icon: favicon.ico
+      icon: favicon.png
       iconHeight: 18
 
 markup:
