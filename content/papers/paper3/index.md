@@ -6,7 +6,7 @@ lastmod: 2024-11-29
 author: ["Aiman Husni"]
 summary: "In this guide, we’ll walk you through the steps to install Kali Linux in VMware, ensuring a smooth and efficient setup process" 
 cover:
-    image: "paper3.png"
+    #image: "paper3.png"
     alt: "Vizualisation of an inner hedgehog"
     relative: false
 editPost:
