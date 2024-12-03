@@ -3,7 +3,7 @@ title: Installation
 description: Install VMWare Workstation Player and Kali Linux  Setup
 slug: hello-world
 date: 2024-11-29 00:00:00+0000
-image: cover.png
+image: cover.jpg
 categories:
     - Linux
 tags:
@@ -32,7 +32,9 @@ Kali Linux Link : [Get Kali | Kali Linux](https://www.kali.org/get-kali/#kali-vi
 
 *Make sure you download the one that already pre built for VMware (refer photos below 👇🏿)*
 
-![](ff052721-4c19-4993-ad17-ca989a728eeb.png)
+![500](ff052721-4c19-4993-ad17-ca989a728eeb.png)
+
+{{ $image := resources.Get "images/sunset.jpg" }}
 
 Download the VMware one, just click the download (arrow) symbol
 
@@ -49,9 +51,9 @@ Download the VMware one, just click the download (arrow) symbol
 
 *Click the file with Mouse right, and then select WinRAR > Extract to “kali-linux”.* 
 
-![Screenshot 2024-11-13 224355.png](Screenshot_2024-11-13_224355.png)
+![](Screenshot_2024-11-13_224355.png)
 
----
+
 
 ## Download VMware Workstation. First, visit the following Google Drive link
 
@@ -61,13 +63,13 @@ Google Drive Link : [VMware Workstation](https://drive.google.com/file/d/1grjM81
 
 ![](Screenshot_2024-11-13_214843.png)
 
----
+
 
 ## Install VMWare Workstation Player
 
 *Extract The Downloaded VMWare File & Install  Right click > WinRAR > Extract to “ VMware-workstation”* 
 
-  **
+
 
 ![](Screenshot_2024-11-13_222130.png)
 
