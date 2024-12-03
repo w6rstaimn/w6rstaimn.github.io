@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Linux on w6rstaimn</title><link>https://w6rstaimn.github.io/tags/linux/</link><description>Recent content in Linux on w6rstaimn</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 29 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://w6rstaimn.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml"/><item><title>Installation</title><link>https://w6rstaimn.github.io/p/hello-world/</link><pubDate>Fri, 29 Nov 2024 00:00:00 +0000</pubDate><guid>https://w6rstaimn.github.io/p/hello-world/</guid><description>&lt;img src="https://w6rstaimn.github.io/p/hello-world/cover.jpg" alt="Featured image of post Installation" />&lt;h2 id="install-vmware-workstation-player-and-kali-linux-setup">Install VMWare Workstation Player and Kali Linux Setup
+&lt;/h2>&lt;p>Hello guys! This is tutorial to setup kali linux in your host(laptop) without uninstalling your windows.&lt;/p>
+&lt;h2 id="download-winrar-at-the-following-site-based-on-your-windows-version-32-bit-or-64-bit-and-install-winrar-program">Download WinRAR at the following site based on your Windows version (32-bit or 64-bit) and install WinRAR program.
+&lt;/h2>&lt;p>WinRAR Link : &lt;a class="link" href="https://www.win-rar.com/download.html?&amp;amp;L=0" target="_blank" rel="noopener"
+>WinRAR&lt;/a>&lt;/p>
+&lt;h2 id="download-kali-linux-image">Download Kali Linux Image
+&lt;/h2>&lt;p>Kali Linux Link : &lt;a class="link" href="https://www.kali.org/get-kali/#kali-virtual-machines" target="_blank" rel="noopener"
+>Get Kali | Kali Linux&lt;/a>&lt;/p>
+&lt;p>&lt;em>Make sure you download the one that already pre built for VMware (refer photos below 👇🏿)&lt;/em>&lt;/p>
+&lt;p>&lt;img src="https://w6rstaimn.github.io/p/hello-world/ff052721-4c19-4993-ad17-ca989a728eeb.png"
+width="924"
+height="975"
+srcset="https://w6rstaimn.github.io/p/hello-world/ff052721-4c19-4993-ad17-ca989a728eeb_hu17823331694475938840.png 480w, https://w6rstaimn.github.io/p/hello-world/ff052721-4c19-4993-ad17-ca989a728eeb_hu5676132764979403365.png 1024w"
+loading="lazy"
+alt="500"
+class="gallery-image"
+data-flex-grow="94"
+data-flex-basis="227px"
+>&lt;/p>
+&lt;p>{{ $image := resources.Get &amp;ldquo;images/sunset.jpg&amp;rdquo; }}&lt;/p>
+&lt;p>Download the VMware one, just click the download (arrow) symbol&lt;/p>
+&lt;h2 id="go-to-the-download-folder-cusersusernamedownloads">Go to the Download Folder (C:\Users\UserName\Downloads)
+&lt;/h2>&lt;p>*Make the Kali folder at the C:*&lt;br>
+&lt;em>Move the file (kali-linux-2024.3-vmware-amd64) to the C:\Kali&lt;/em>&lt;/p>
+&lt;p>&lt;img src="https://w6rstaimn.github.io/p/hello-world/Screenshot_2024-11-13_223929.png"
+width="1177"
+height="691"
+srcset="https://w6rstaimn.github.io/p/hello-world/Screenshot_2024-11-13_223929_hu13485383155976348814.png 480w, https://w6rstaimn.github.io/p/hello-world/Screenshot_2024-11-13_223929_hu13650601579737329182.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="170"
+data-flex-basis="408px"
+>&lt;/p>
+&lt;p>&lt;em>Click the file with Mouse right, and then select WinRAR &amp;gt; Extract to “kali-linux”.&lt;/em>&lt;/p>
+&lt;p>&lt;img src="https://w6rstaimn.github.io/p/hello-world/Screenshot_2024-11-13_224355.png"
+width="1221"
+height="698"
+srcset="https://w6rstaimn.github.io/p/hello-world/Screenshot_2024-11-13_224355_hu12876670556233978430.png 480w, https://w6rstaimn.github.io/p/hello-world/Screenshot_2024-11-13_224355_hu15652974256111760921.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="174"
+data-flex-basis="419px"
+>&lt;/p>
+&lt;h2 id="download-vmware-workstation-first-visit-the-following-google-drive-link">Download VMware Workstation. First, visit the following Google Drive link
+&lt;/h2>&lt;p>Google Drive Link : &lt;a class="link" href="https://drive.google.com/file/d/1grjM81qPywO2Y-4CprIyU1H3xscb7Ph6/view?usp=drive_link" target="_blank" rel="noopener"
+>VMware Workstation&lt;/a>&lt;/p>
+&lt;p>&lt;em>Download -&amp;gt; New tab will appear -&amp;gt; Download anyway&lt;/em>&lt;/p>
+&lt;p>&lt;img src="https://w6rstaimn.github.io/p/hello-world/Screenshot_2024-11-13_214843.png"
+width="1053"
+height="346"
+srcset="https://w6rstaimn.github.io/p/hello-world/Screenshot_2024-11-13_214843_hu3772251149581358473.png 480w, https://w6rstaimn.github.io/p/hello-world/Screenshot_2024-11-13_214843_hu2957764178720879359.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="304"
+data-flex-basis="730px"
+>&lt;/p>
+&lt;h2 id="install-vmware-workstation-player">Install VMWare Workstation Player
+&lt;/h2>&lt;p>&lt;em>Extract The Downloaded VMWare File &amp;amp; Install Right click &amp;gt; WinRAR &amp;gt; Extract to “ VMware-workstation”&lt;/em>&lt;/p>
+&lt;p>&lt;img src="https://w6rstaimn.github.io/p/hello-world/Screenshot_2024-11-13_222130.png"
+width="1110"
+height="485"
+srcset="https://w6rstaimn.github.io/p/hello-world/Screenshot_2024-11-13_222130_hu1854178049960586423.png 480w, https://w6rstaimn.github.io/p/hello-world/Screenshot_2024-11-13_222130_hu3200301634762200402.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="228"
+data-flex-basis="549px"
+>&lt;/p>
+&lt;p>&lt;em>Click &amp;ldquo;Next,&amp;rdquo; tick the small checkbox, and click &amp;ldquo;Next&amp;rdquo; again.&lt;/em>&lt;/p>
+&lt;p>&lt;img src="https://w6rstaimn.github.io/p/hello-world/Screenshot_2024-11-13_222135.png"
+width="1094"
+height="493"
+srcset="https://w6rstaimn.github.io/p/hello-world/Screenshot_2024-11-13_222135_hu18427420334719423409.png 480w, https://w6rstaimn.github.io/p/hello-world/Screenshot_2024-11-13_222135_hu5158650329762447006.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="221"
+data-flex-basis="532px"
+>&lt;/p>
+&lt;p>&lt;em>Tick the small checkbox, “Enhanced Keyboard Driver” and “Add WMware Workstation console” then click &amp;ldquo;Next&amp;rdquo; again.&lt;/em>&lt;/p>
+&lt;p>&lt;img src="https://w6rstaimn.github.io/p/hello-world/Screenshot_2024-11-13_222138.png"
+width="1079"
+height="471"
+srcset="https://w6rstaimn.github.io/p/hello-world/Screenshot_2024-11-13_222138_hu5142250489895409404.png 480w, https://w6rstaimn.github.io/p/hello-world/Screenshot_2024-11-13_222138_hu14481319631077906960.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="229"
+data-flex-basis="549px"
+>&lt;/p>
+&lt;p>&lt;em>Click &amp;ldquo;Next,&amp;rdquo; , and click &amp;ldquo;Install&amp;rdquo;.&lt;/em>&lt;/p>
+&lt;p>&lt;img src="https://w6rstaimn.github.io/p/hello-world/dd823bb0-0a4e-4100-aef0-7fd94bb50bbd.png"
+width="636"
+height="489"
+srcset="https://w6rstaimn.github.io/p/hello-world/dd823bb0-0a4e-4100-aef0-7fd94bb50bbd_hu12384214743151217378.png 480w, https://w6rstaimn.github.io/p/hello-world/dd823bb0-0a4e-4100-aef0-7fd94bb50bbd_hu13182473930802872711.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="130"
+data-flex-basis="312px"
+>&lt;/p>
+&lt;p>&lt;em>Click &amp;ldquo;Finish&amp;rdquo;.&lt;/em>&lt;/p>
+&lt;hr>
+&lt;h2 id="finish-installing-and-setup-the-vmware">Finish installing and setup the VMware
+&lt;/h2>&lt;p>&lt;em>Click the VMware installer and just download as always. If it asking you to update you can ignore it first.&lt;/em>&lt;/p>
+&lt;p>&lt;em>If you finish the VMware setup you should see this screen if VMware is open&lt;/em>&lt;/p>
+&lt;p>&lt;img src="https://w6rstaimn.github.io/p/hello-world/Screenshot_2024-11-13_224700.png"
+width="1246"
+height="773"
+srcset="https://w6rstaimn.github.io/p/hello-world/Screenshot_2024-11-13_224700_hu7875208007809578749.png 480w, https://w6rstaimn.github.io/p/hello-world/Screenshot_2024-11-13_224700_hu9807893611274848335.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="161"
+data-flex-basis="386px"
+>&lt;/p>
+&lt;hr>
+&lt;h2 id="import-and-run-kali-linux-vmware-vmdk-file-into-the-vmware-workstation-player">Import and Run Kali Linux VMWare vmdk file into the VMWare Workstation Player
+&lt;/h2>&lt;p>&lt;em>Click Open a Virtual Machine &amp;gt; Open, then select the following file “C:\Kali\kali-linux-2024.3-vmware-amd64\kali-linux-2024.3-vmware-amd64.vmwarevm”&lt;/em>&lt;/p>
+&lt;p>&lt;img src="https://w6rstaimn.github.io/p/hello-world/Screenshot_2024-11-13_224907.png"
+width="1616"
+height="760"
+srcset="https://w6rstaimn.github.io/p/hello-world/Screenshot_2024-11-13_224907_hu11258020765709270836.png 480w, https://w6rstaimn.github.io/p/hello-world/Screenshot_2024-11-13_224907_hu6135079244565892308.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="212"
+data-flex-basis="510px"
+>&lt;/p>
+&lt;p>&lt;em>It will take some time to boot the kali inside the vmware. Just wait until its done. If the boot is done, you will see this screen.&lt;/em>&lt;/p>
+&lt;p>&lt;img src="https://w6rstaimn.github.io/p/hello-world/Screenshot_2024-11-13_225656.png"
+width="1284"
+height="943"
+srcset="https://w6rstaimn.github.io/p/hello-world/Screenshot_2024-11-13_225656_hu4433241966606077229.png 480w, https://w6rstaimn.github.io/p/hello-world/Screenshot_2024-11-13_225656_hu2179350396900893327.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="136"
+data-flex-basis="326px"
+>&lt;/p>
+&lt;p>&lt;em>You can login using this credential :&lt;/em>&lt;/p>
+&lt;p>&lt;em>Username : kali&lt;/em>&lt;/p>
+&lt;p>&lt;em>Password : kali&lt;/em>&lt;/p>
+&lt;p>&lt;img src="https://w6rstaimn.github.io/p/hello-world/Screenshot_2024-11-13_225718.png"
+width="1284"
+height="943"
+srcset="https://w6rstaimn.github.io/p/hello-world/Screenshot_2024-11-13_225718_hu15839945080896013950.png 480w, https://w6rstaimn.github.io/p/hello-world/Screenshot_2024-11-13_225718_hu7935331440185631524.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="136"
+data-flex-basis="326px"
+>&lt;/p>
+&lt;p>&lt;em>Congratulation mate!&lt;/em>&lt;/p>
+&lt;hr>
+&lt;p>Thats all! If you have any question do tell in the whatsapp yaaa, thank you!😍&lt;/p></description></item></channel></rss>
