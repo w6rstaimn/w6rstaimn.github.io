@@ -1,7 +1,7 @@
 ---
 title: Installation
 description: Install VMWare Workstation Player and Kali Linux  Setup
-slug: hello-world
+slug: Kali-Install
 date: 2024-11-29 00:00:00+0000
 image: cover.jpg
 categories:
@@ -32,11 +32,9 @@ Kali Linux Link : [Get Kali | Kali Linux](https://www.kali.org/get-kali/#kali-vi
 
 *Make sure you download the one that already pre built for VMware (refer photos below 👇🏿)*
 
-![500](ff052721-4c19-4993-ad17-ca989a728eeb.png)
+![](ff052721-4c19-4993-ad17-ca989a728eeb.png)
 
-{{ $image := resources.Get "images/sunset.jpg" }}
-
-Download the VMware one, just click the download (arrow) symbol
+*Download the VMware one, just click the download (arrow) symbol*
 
 
 

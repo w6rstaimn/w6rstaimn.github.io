@@ -27,7 +27,7 @@ math = false
 readingTime = true
 
 [article.license]
-enabled = true
+enabled = false
 default = "Licensed under CC BY-NC-SA 4.0"
 
 ## Widgets
@@ -69,10 +69,10 @@ toggle = true
 default = "auto"
 
 [imageProcessing.cover]
-enabled = true
+enabled = false
 
 [imageProcessing.content]
-enabled = true
+enabled = false
 
 ## Comments
 [comments]
@@ -123,8 +123,8 @@ path = ""
 lang = ""
 
 [comments.cactus]
-defaultHomeserverUrl = "https://matrix.cactus.chat:8448"
-serverName = "cactus.chat"
+defaultHomeserverUrl = ""
+serverName = ""
 siteName = ""
 
 [comments.giscus]
