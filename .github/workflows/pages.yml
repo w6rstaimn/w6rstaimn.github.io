@@ -55,7 +55,7 @@ jobs:
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
         run: |
-          hugo --minify -d ./public --baseURL https://nunocoracao.github.io/blowfish_artist/
+          hugo --minify -d ./public --baseURL https://w6rstaimn.github.io
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
@@ -65,7 +65,7 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: https://github.com/w6rstaimn/w6rstaimn.github.io
+      url: https://w6rstaimn.github.io
     runs-on: ubuntu-latest
     needs: build
     steps:
