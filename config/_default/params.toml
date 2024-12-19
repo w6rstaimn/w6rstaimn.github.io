@@ -67,7 +67,7 @@ mainSections = ["posts"]
   showSummary = true
   sharingLinks = [ "linkedin", "twitter"] 
   #[ "linkedin", "twitter", "whatsapp", "pinterest", "reddit", "facebook", "email"]
-  showZenMode = true
+  showZenMode = false
 
 [list]
   showHero = true

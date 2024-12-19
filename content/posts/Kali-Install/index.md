@@ -115,10 +115,3 @@ Password : kali
 
 
 Thats all! If you have any question do tell in the whatsapp yaaa, thank you!😍
-
-<script>
-    window.onload = function() {
-        var zenButton = document.getElementById('zen-mode-button');
-        zenButton.click();
-    };
-</script>

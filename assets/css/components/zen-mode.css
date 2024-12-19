@@ -6,11 +6,4 @@
     position: relative;
 }
 
-body.zen-mode-enable {
-    #bmc-wbtn, .author {
-        display:none !important;
-    }
-}
-
-
 
