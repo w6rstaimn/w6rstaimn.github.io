@@ -65,7 +65,7 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: https://nunocoracao.github.io/blowfish_artist/
+      url: https://github.com/w6rstaimn/w6rstaimn.github.io
     runs-on: ubuntu-latest
     needs: build
     steps:
