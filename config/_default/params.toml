@@ -12,6 +12,11 @@ autoSwitchAppearance = true
 enableSearch = true
 enableCodeCopy = true
 
+disableImageOptimization = false
+disableTextInHeader = true
+
+smartTOC = true
+
 mainSections = ["posts"]
 # robots = ""
 
@@ -35,10 +40,11 @@ mainSections = ["posts"]
   cardView = true
   cardViewScreenWidth = false
   layoutBackgroundBlur = true # only used when layout equals background
+  
 
 [article]
   showDate = true
-  #showViews = true
+  showViews = true
   #showLikes = true
   showDateUpdated = false
   showAuthor = true
@@ -54,18 +60,19 @@ mainSections = ["posts"]
   showPagination = true
   invertPagination = false
   showReadingTime = true
-  showTableOfContents = true
+  showTableOfContents = false
   showTaxonomies = false 
   showAuthorsBadges = false 
-  showWordCount = true
+  showWordCount = false
   showSummary = true
   sharingLinks = [ "linkedin", "twitter"] 
   #[ "linkedin", "twitter", "whatsapp", "pinterest", "reddit", "facebook", "email"]
+  showZenMode = true
 
 [list]
   showHero = true
   heroStyle = "background" # valid options: basic, big, background
-  layoutBackgroundHeaderSpace = false
+  layoutBackgroundHeaderSpace = true
   showBreadcrumbs = false
   showSummary = true
   showTableOfContents = false

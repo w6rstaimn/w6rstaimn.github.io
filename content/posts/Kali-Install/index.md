@@ -23,7 +23,8 @@ Kali Linux Link : [Get Kali | Kali Linux](https://www.kali.org/get-kali/#kali-vi
 
 *Make sure you download the one that already pre built for VMware (refer photos below 👇🏿)*
 
-![](ff052721-4c19-4993-ad17-ca989a728eeb.png)
+![](Download-Kali.png#center)
+
 
 *Download the VMware one, just click the download (arrow) symbol*
 
@@ -32,13 +33,11 @@ Go to the Download Folder (C:\Users\UserName\Downloads)
 *Make the Kali folder at the C:\*  
 *Move the file (kali-linux-2024.3-vmware-amd64) to the C:\Kali*   
 
-  
-
-![](Screenshot_2024-11-13_223929.png)
+![](Screenshot_2024-11-13_223929.png#center)
 
 *Click the file with Mouse right, and then select WinRAR > Extract to “kali-linux”.* 
 
-![](Screenshot_2024-11-13_224355.png)
+![](Screenshot_2024-11-13_224355.png#center)
 
 
 
@@ -48,7 +47,7 @@ Google Drive Link : [VMware Workstation](https://drive.google.com/file/d/1grjM81
 
 *Download -> New tab will appear -> Download anyway*   
 
-![](Screenshot_2024-11-13_214843.png)
+![](Screenshot_2024-11-13_214843.png#center)
 
 
 
@@ -59,19 +58,19 @@ Install VMWare Workstation Player
 
 
 
-![](Screenshot_2024-11-13_222130.png)
+![](Screenshot_2024-11-13_222130.png#center)
 
 *Click "Next," tick the small checkbox, and click "Next" again.*
 
-![](Screenshot_2024-11-13_222135.png)
+![](Screenshot_2024-11-13_222135.png#center)
 
 *Tick the small checkbox, “Enhanced Keyboard Driver” and “Add WMware Workstation console” then click "Next" again.*
 
-![](Screenshot_2024-11-13_222138.png)
+![](Screenshot_2024-11-13_222138.png#center)
 
 *Click "Next," , and click "Install".*
 
-![](dd823bb0-0a4e-4100-aef0-7fd94bb50bbd.png)
+![](dd823bb0-0a4e-4100-aef0-7fd94bb50bbd.png#center)
 
 *Click "Finish".*
 
@@ -84,7 +83,7 @@ Finish installing and setup the VMware
 
 *If you finish the VMware setup you should see this screen if VMware is open*
 
-![](Screenshot_2024-11-13_224700.png)
+![](Screenshot_2024-11-13_224700.png#center)
 
 
 
@@ -94,11 +93,11 @@ Finish installing and setup the VMware
 
  
 
-![](Screenshot_2024-11-13_224907.png)
+![](Screenshot_2024-11-13_224907.png#center)
 
 *It will take some time to boot the kali inside the vmware. Just wait until its done. If the boot is done, you will see this screen.*
 
-![](Screenshot_2024-11-13_225656.png)
+![](Screenshot_2024-11-13_225656.png#center)
 
 *You can login using this credential :*
 
@@ -109,10 +108,17 @@ Password : kali
 {{< /alert >}}
 
 
-![](Screenshot_2024-11-13_225718.png)
+![](Screenshot_2024-11-13_225718.png#center)
 
 *Congratulation mate!* 
 
 
 
 Thats all! If you have any question do tell in the whatsapp yaaa, thank you!😍
+
+<script>
+    window.onload = function() {
+        var zenButton = document.getElementById('zen-mode-button');
+        zenButton.click();
+    };
+</script>

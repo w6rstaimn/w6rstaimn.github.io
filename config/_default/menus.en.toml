@@ -16,9 +16,14 @@
   weight = 10
 
 [[main]]
-  name = "Tags"
-  pageRef = "tags"
+  name = "About"
+  pageRef = "about"
   weight = 20
+
+#[[main]]
+#  name = "Tags"
+#  pageRef = "tags"
+#  weight = 20
 
 #[[main]]
 #  identifier = "web"
@@ -29,13 +34,13 @@
 [[main]]
   identifier = "github"
   pre = "github"
-  url = "https://github.com/nunocoracao/blowfish"
+  url = "https://github.com/w6rstaimn"
   weight = 50
 
 [[main]]
-  identifier = "twitter"
-  pre = "twitter"
-  url = "https://twitter.com/burufugu"
+  identifier = "x-twitter"
+  pre = "x-twitter"
+  url = "https://twitter.com"
   weight = 60
 
 
@@ -44,7 +49,7 @@
 # the copyright notice. Configure as per the main menu above.
 
 
- [[footer]]
-   name = "Tags"
-   pageRef = "tags"
-   weight = 10
+# [[footer]]
+#   name = "Tags"
+#   pageRef = "tags"
+#   weight = 10
