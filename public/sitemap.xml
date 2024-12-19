@@ -3,66 +3,66 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>https://example.org/categories/blog/</loc>
+    <loc>https://w6rstaimn.github.io/categories/blog/</loc>
     <lastmod>2024-12-19T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://example.org/categories/</loc>
+    <loc>https://w6rstaimn.github.io/categories/</loc>
     <lastmod>2024-12-19T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://example.org/tags/example/</loc>
+    <loc>https://w6rstaimn.github.io/tags/example/</loc>
     <lastmod>2024-12-19T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://example.org/posts/kali-install/</loc>
+    <loc>https://w6rstaimn.github.io/posts/kali-install/</loc>
     <lastmod>2024-12-19T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://example.org/categories/post/</loc>
+    <loc>https://w6rstaimn.github.io/categories/post/</loc>
     <lastmod>2024-12-19T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://example.org/tags/tag/</loc>
+    <loc>https://w6rstaimn.github.io/tags/tag/</loc>
     <lastmod>2024-12-19T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://example.org/tags/</loc>
+    <loc>https://w6rstaimn.github.io/tags/</loc>
     <lastmod>2024-12-19T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://example.org/</loc>
+    <loc>https://w6rstaimn.github.io/</loc>
     <lastmod>2024-12-19T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://example.org/posts/</loc>
+    <loc>https://w6rstaimn.github.io/posts/</loc>
     <lastmod>2022-06-13T20:55:37+01:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://example.org/authors/</loc>
+    <loc>https://w6rstaimn.github.io/authors/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://example.org/series/</loc>
+    <loc>https://w6rstaimn.github.io/series/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
