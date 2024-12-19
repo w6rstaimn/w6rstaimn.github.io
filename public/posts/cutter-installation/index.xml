@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cutter Installation on w6rst</title>
+    <link>http://localhost:1313/posts/cutter-installation/</link>
+    <description>Recent content in Cutter Installation on w6rst</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2024 w6rst</copyright>
+    <lastBuildDate>Wed, 18 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/posts/cutter-installation/index.xml" rel="self" type="application/rss+xml" />
+    
+  </channel>
+</rss>

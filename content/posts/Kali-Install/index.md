@@ -1,15 +1,14 @@
 ---
 title: "Kali Installation"
-summary: "Hello guys! This is tutorial to setup kali linux in your host(laptop) without uninstalling your windows."
-date: 2024-12-19
+summary: "Kali Linux is an open-source distribution designed for cybersecurity professionals, ethical hackers, and penetration testers. It is Debian-derived and focused on providing over 600 tools for penetration testing and security auditing."
+date: 2024-11-10
 draft: false
 categories: ["Post","Blog",]
 description: "a description"
 tags: ["example", "tag"]
 ---
  
-## Install VMWare
-Install VMWare Workstation Player and Kali Linux Setup
+# How to Install Kali & VMWare: A Quick Guide
 
 Hello guys! This is tutorial to setup kali linux in your host(laptop) without uninstalling your windows. 
 

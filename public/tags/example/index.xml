@@ -7,15 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2024 w6rst</copyright>
-    <lastBuildDate>Thu, 19 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://w6rstaimn.github.io/tags/example/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 18 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://w6rstaimn.github.io/tags/example/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Cutter Installation</title>
+      <link>https://w6rstaimn.github.io/posts/cutter-installation/</link>
+      <pubDate>Wed, 18 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://w6rstaimn.github.io/posts/cutter-installation/</guid>
+      <description>Cutter is an advanced, user-friendly reverse engineering platform powered by Rizin. If you&amp;rsquo;re looking to install Cutter on your Linux system, follow these simple steps.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://w6rstaimn.github.io/posts/cutter-installation/featured.png" />
+    </item>
     
     <item>
       <title>Kali Installation</title>
       <link>https://w6rstaimn.github.io/posts/kali-install/</link>
-      <pubDate>Thu, 19 Dec 2024 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 10 Nov 2024 00:00:00 +0000</pubDate>
       
       <guid>https://w6rstaimn.github.io/posts/kali-install/</guid>
-      <description>Hello guys! This is tutorial to setup kali linux in your host(laptop) without uninstalling your windows.</description>
+      <description>Kali Linux is an open-source distribution designed for cybersecurity professionals, ethical hackers, and penetration testers. It is Debian-derived and focused on providing over 600 tools for penetration testing and security auditing.</description>
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://w6rstaimn.github.io/posts/kali-install/featured.jpg" />
     </item>
     
