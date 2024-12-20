@@ -7,13 +7,12 @@
   {{ $.Scratch.Set "icon" (default "triangle-exclamation" (.Get 0) ) }}
 {{ end }}
 
-
 <div
   {{ if not ($.Scratch.Get "cardColor") }}
     class="flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900"
   {{ else }}
     class="flex px-4 py-3 rounded-md"
-    style="background-color: {{ $.Scratch.Get "cardColor" }}"
+    style="background-color: {{ $.Scratch.Get "cardColor" }};"
   {{ end }}>
 
   <span
@@ -21,7 +20,7 @@
       class="text-primary-400 ltr:pr-3 rtl:pl-3 flex items-center"
     {{ else }}
       class="ltr:pr-3 rtl:pl-3 flex items-center"
-      style="color: {{ $.Scratch.Get "iconColor" }}"
+      style="color: {{ $.Scratch.Get "iconColor" }};"
     {{ end }}>
 
     {{ partial "icon.html" ($.Scratch.Get "icon") }}
@@ -29,9 +28,10 @@
 
   <span
     {{ if not ($.Scratch.Get "textColor") }}
-      class="dark:text-neutral-300"
+      class="dark:text-neutral-300 overflow-hidden text-ellipsis whitespace-nowrap"
     {{ else }}
-      style="color: {{ $.Scratch.Get "textColor" }}"
+      class="overflow-hidden text-ellipsis whitespace-nowrap"
+      style="color: {{ $.Scratch.Get "textColor" }};"
     {{ end }}>
     
     {{- .Inner | markdownify -}}

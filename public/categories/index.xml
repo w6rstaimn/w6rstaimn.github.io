@@ -7,7 +7,27 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2024 w6rst</copyright>
-    <lastBuildDate>Sun, 10 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://w6rstaimn.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 20 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://w6rstaimn.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Posts</title>
+      <link>https://w6rstaimn.github.io/categories/posts/</link>
+      <pubDate>Fri, 20 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://w6rstaimn.github.io/categories/posts/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Writeups</title>
+      <link>https://w6rstaimn.github.io/categories/writeups/</link>
+      <pubDate>Fri, 20 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://w6rstaimn.github.io/categories/writeups/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>Blog</title>

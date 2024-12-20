@@ -17,7 +17,7 @@ disableTextInHeader = true
 
 smartTOC = true
 
-mainSections = ["posts"]
+mainSections = ["posts","writeups"]
 # robots = ""
 
 [header]
@@ -38,7 +38,7 @@ mainSections = ["posts"]
   showMoreLink = true
   showMoreLinkDest = "/posts"
   cardView = true
-  cardViewScreenWidth = false
+  cardViewScreenWidth = true
   layoutBackgroundBlur = true # only used when layout equals background
   
 
