@@ -7,7 +7,27 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2024 w6rst</copyright>
-    <lastBuildDate>Fri, 20 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://w6rstaimn.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 21 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://w6rstaimn.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>1337UP LIVE CTF 2024</title>
+      <link>https://w6rstaimn.github.io/writeups/1337up-live-ctf/</link>
+      <pubDate>Sat, 21 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://w6rstaimn.github.io/writeups/1337up-live-ctf/</guid>
+      <description>&lt;h1 class=&#34;relative group&#34;&gt;1337UP LIVE CTF 2024 Writeups 
+    &lt;div id=&#34;1337up-live-ctf-2024-writeups&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#1337up-live-ctf-2024-writeups&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h1&gt;
+&lt;p&gt;I&amp;rsquo;ve been diving into binary exploitation for the past three months, and honestly, it&amp;rsquo;s been a wild journey! ☠️ If you don’t know, binary exploitation is all about finding bugs in programs and using them to break stuff (in a good way, of course). I got into it because I’m super into cybersecurity and hacking, and this stuff is just next level. In this post, I’ll walk you through a pwn challenge I could solve.&lt;/p&gt;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://w6rstaimn.github.io/writeups/1337up-live-ctf/featured.png" />
+    </item>
     
     <item>
       <title>HTB University CTF 2024</title>

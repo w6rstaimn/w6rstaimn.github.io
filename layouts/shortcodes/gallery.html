@@ -1,5 +1,5 @@
 {{ $id := delimit (slice "gallery" (partial "functions/uid.html" .)) "-" }}
 
-<div id="{{ $id }}" class="gallery">
+<div id="{{ $id }}" class="gallery" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
   {{ .Inner }}
 </div>

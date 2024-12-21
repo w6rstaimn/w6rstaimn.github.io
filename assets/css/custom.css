@@ -57,3 +57,15 @@ img[src$='#floatright']
     margin: 0.7rem;      /* this margin is totally up to you */
     /* whatever else styles you fancy here */
 }
+
+.gallery-center {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Optional: Adds space between images */
+  flex-wrap: wrap; /* Ensures images wrap on smaller screens */
+}
+
+.gallery-center img {
+  max-width: 100%; /* Ensures images are responsive */
+  height: auto;
+}
