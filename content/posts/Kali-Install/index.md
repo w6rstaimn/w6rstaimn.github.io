@@ -12,11 +12,11 @@ tags: ["example", "tag"]
 
 Hello guys! This is tutorial to setup kali linux in your host(laptop) without uninstalling your windows. 
 
-## Download WinRAR
+### Download WinRAR
 Download WinRAR at the following site based on your Windows version (32-bit or 64-bit) and install WinRAR program.
 WinRAR Link : [WinRAR](https://www.win-rar.com/download.html?&L=0)
 
-## Download Kali
+### Download Kali
 Download Kali Linux Image
 Kali Linux Link : [Get Kali | Kali Linux](https://www.kali.org/get-kali/#kali-virtual-machines)
 
@@ -27,7 +27,7 @@ Kali Linux Link : [Get Kali | Kali Linux](https://www.kali.org/get-kali/#kali-vi
 
 *Download the VMware one, just click the download (arrow) symbol*
 
-## Go to the Download Folder
+### Go to the Download Folder
 Go to the Download Folder (C:\Users\UserName\Downloads)
 *Make the Kali folder at the C:\*  
 *Move the file (kali-linux-2024.3-vmware-amd64) to the C:\Kali*   
@@ -40,7 +40,7 @@ Go to the Download Folder (C:\Users\UserName\Downloads)
 
 
 
-## Download VMware Workstation
+### Download VMware Workstation
 Download VMware Workstation. First, visit the following Google Drive link
 Google Drive Link : [VMware Workstation](https://drive.google.com/file/d/1grjM81qPywO2Y-4CprIyU1H3xscb7Ph6/view?usp=drive_link)
 
@@ -50,7 +50,7 @@ Google Drive Link : [VMware Workstation](https://drive.google.com/file/d/1grjM81
 
 
 
-## Install VMWare Workstation Player
+### Install VMWare Workstation Player
 Install VMWare Workstation Player
 
 *Extract The Downloaded VMWare File & Install  Right click > WinRAR > Extract to “ VMware-workstation”* 
@@ -75,7 +75,7 @@ Install VMWare Workstation Player
 
 
 
-## Finish installing
+### Finish installing
 Finish installing and setup the VMware
 
 *Click the VMware installer and just download as always. If it asking you to update you can ignore it first.* 
@@ -86,7 +86,7 @@ Finish installing and setup the VMware
 
 
 
-## Continuee
+### Continuee
 
 *Click Open a Virtual Machine > Open, then select the following file “C:\Kali\kali-linux-2024.3-vmware-amd64\kali-linux-2024.3-vmware-amd64.vmwarevm”* 
 

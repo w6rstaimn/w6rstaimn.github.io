@@ -47,7 +47,7 @@ Contains debugging symbols, making analysis easier.
 
 <div style="border-top: 2px solid #ccc; margin: 20px 0;"></div>
 
-## Understanding the Main Menu
+### Understanding the Main Menu
 Here’s the decompiled main() function:
 
 {{< gallery >}}
@@ -69,7 +69,7 @@ A hidden option exists: entering 0x539 (1337 in decimal) calls enter_cheatcode()
 
 <div style="border-top: 2px solid #ccc; margin: 20px 0;"></div>
 
-## The Vulnerable enter_cheatcode() Function
+### The Vulnerable enter_cheatcode() Function
 Here’s the decompiled code:
 
 ![](enter_cheatcode.png#center)
@@ -82,7 +82,7 @@ Here’s the decompiled code:
 
 <div style="border-top: 2px solid #ccc; margin: 20px 0;"></div>
 
-## The cheat_mode() Function
+### The cheat_mode() Function
 This function is the goal of the exploit. It activates cheat mode and retrieves the flag:
 
 ![](cheatmode.png#center)
@@ -102,7 +102,7 @@ To trigger cheat_mode(), we need to overflow the buffer in enter_cheatcode() and
 
 <div style="border-top: 2px solid #ccc; margin: 20px 0;"></div>
 
-## Exploitation Plan
+### Exploitation Plan
 
 Buffer Overflow:
 
@@ -121,7 +121,7 @@ Retrieve the Flag:
 Once cheat mode is activated, the program will read and print the flag from flag.txt.
 <div style="border-top: 2px solid #ccc; margin: 20px 0;"></div>
 
-## Finding the Padding
+### Finding the Padding
 
 We just need to find offset values to overflow the buffer and RBP to reach the RIP/Return address. For this, I use cyclic 100 in gdb-pwndbg and we check the register RBP register.
 
@@ -147,7 +147,7 @@ We can find a perfect gadget pop rdi & pop rsi for our exploit using ROPgadget. 
 
 ![](gadjet.png#center)
 
-## Final Exploit
+### Final Exploit
 ~~~python
 from pwn import *
 

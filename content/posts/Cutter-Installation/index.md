@@ -12,7 +12,7 @@ tags: ["example", "tag"]
 
 Cutter is an advanced, user-friendly reverse engineering platform powered by Rizin. If you're looking to install Cutter on your Linux system, follow these simple steps:
 
-## Download Cutter
+### Download Cutter
 First, download the latest version of Cutter from its official GitHub repository. For this guide, we'll use Cutter-v2.3.4-Linux-x86_64.AppImage:
 
 Cutter Link : [Get Cutter | Cutter](https://github.com/rizinorg/cutter/releases/tag/v2.3.4)
@@ -21,7 +21,7 @@ Cutter Link : [Get Cutter | Cutter](https://github.com/rizinorg/cutter/releases/
 
 
 
-## Move the Downloaded File
+### Move the Downloaded File
 Once the download is complete, the Cutter AppImage will be in your Downloads folder by default. Move the file to a system-wide location for easier access
 
 Run the following command to check your current PATH environment variable:
@@ -31,7 +31,7 @@ echo $PATH
 ```
 ![](echopath.png#center)
 
-## Move the AppImage to a Directory in Your PATH
+### Move the AppImage to a Directory in Your PATH
 
 Use the following command to move the downloaded Cutter AppImage to `/usr/local/bin`,a directory typically included in the PATH:
 
@@ -46,7 +46,7 @@ Explanation:
 
 - **[mv]()**: Moves the specified file from one location to another. In this case, the Cutter AppImage is moved from the Downloads folder to `/usr/local/bin`.
 
-## Make Cutter Executable
+### Make Cutter Executable
 Next, you'll need to give the file executable permissions to run it
 
 Run the following command to make the Cutter AppImage executable:
@@ -62,11 +62,11 @@ Explanation:
 
 - **[+x]()**: Adds execute permissions, allowing the file to be run as a program.
 
-## Conclusion
+### Conclusion
 You now have Cutter installed and ready to use on your Linux system! This reverse engineering tool can help you dive deep into binaries and analyze programs effectively. Happy reverse engineering! 😊
 
 
-## Run Cutter
+### Run Cutter
 After making the file executable, you can launch Cutter directly from the terminal and click OK
 
 ```mmd
@@ -88,7 +88,7 @@ Tip, you can also use the Tab key for auto-completion to quickly type the file n
 {{< /alert >}}
 
 
-## Configuring Cutter
+### Configuring Cutter
 
 Once Cutter is running, follow these steps to configure it for optimal usage:
 
@@ -107,7 +107,7 @@ Now rearrange the sections window by click and hold the title bar and drag it to
 
 ![](sections.gif#center)
 
-## Customize Appearance
+### Customize Appearance
 
 Go to the Edit menu.
 
@@ -117,7 +117,7 @@ Choose your preferred theme to personalize Cutter’s interface.
 
 ![](appearance.png#center)
 
-## Enable All References in Disassembly View
+### Enable All References in Disassembly View
 
 Go to the Disassembly menu.
 
@@ -126,12 +126,12 @@ Tick all available reference options. This will display all cross-references, ma
 ![](ref2.png#center)
 ![](ref.png#center)
 
-### From this
+#### From this
 ![](fromthis.png#center)
 
-### To this
+#### To this
 ![](tothis.png#center)
 
-## Conclusion
+### Conclusion
 
 By following these steps, you’ve successfully installed and configured Cutter on your Linux system. Cutter’s powerful features, combined with a user-friendly GUI, make it an excellent tool for reverse engineering. Happy exploring!

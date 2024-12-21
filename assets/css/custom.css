@@ -8,7 +8,7 @@ body * {
 }
 
 /* This section for headers allow you to change how they are aligned. If you only want this to change H1 headers for example, then just remove all the other headers from below: */  
-h1,h3, h4, h5, h6 {  
+h1, h2 {  
 text-align: center;  
 }
 
@@ -58,14 +58,3 @@ img[src$='#floatright']
     /* whatever else styles you fancy here */
 }
 
-.gallery-center {
-  display: flex;
-  justify-content: center;
-  gap: 20px; /* Optional: Adds space between images */
-  flex-wrap: wrap; /* Ensures images wrap on smaller screens */
-}
-
-.gallery-center img {
-  max-width: 100%; /* Ensures images are responsive */
-  height: auto;
-}

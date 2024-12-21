@@ -28,8 +28,8 @@
   
   
   
-  <link type="text/css" rel="stylesheet" href="/css/main.bundle.min.148de6e5de6fc76fca60b2abb28d1dae7d9e9c029747f04a0e030d1a6d725b5f75a6b5da224efd46b6ad37cf8eb93be0a332b13e29047cbd29e8def8e9baa4d4.css"
-    integrity="sha512-FI3m5d5vx2/KYLKrso0drn2enAKXR/BKDgMNGm1yW191prXaIk79RratN8&#43;OuTvgozKxPikEfL0p6N746bqk1A==" />
+  <link type="text/css" rel="stylesheet" href="/css/main.bundle.min.eee7b177314b5fb8d45b1bf87f72ee3a09c6ddb93ee1ca7f91f0f0039cb74375ac9c2f11abc9618de6bba66db1e798686d3b832507ab44fd4e47d9a3a7be9ede.css"
+    integrity="sha512-7uexdzFLX7jUWxv4f3LuOgnG3bk&#43;4cp/kfDwA5y3Q3WsnC8Rq8lhjea7pm2x55hobTuDJQerRP1OR9mjp76e3g==" />
   
   
   <script type="text/javascript" src="/js/appearance.min.516a16745bea5a9bd011138d254cc0fd3973cd55ce6e15f3dec763e7c7c2c7448f8fe7b54cca811cb821b0c7e12cd161caace1dd794ac3d34d40937cbcc9ee12.js"
@@ -843,7 +843,7 @@ Contains debugging symbols, making analysis easier.</p>
 <div style="border-top: 2px solid #ccc; margin: 20px 0;"></div>
 
 
-<h2 class="relative group">Understanding the Main Menu 
+<h3 class="relative group">Understanding the Main Menu 
     <div id="understanding-the-main-menu" class="anchor"></div>
     
     <span
@@ -852,7 +852,7 @@ Contains debugging symbols, making analysis easier.</p>
             style="text-decoration-line: none !important;" href="#understanding-the-main-menu" aria-label="Anchor">#</a>
     </span>        
     
-</h2>
+</h3>
 <p>Here’s the decompiled main() function:</p>
 
 
@@ -880,7 +880,7 @@ Contains debugging symbols, making analysis easier.</p>
 <div style="border-top: 2px solid #ccc; margin: 20px 0;"></div>
 
 
-<h2 class="relative group">The Vulnerable enter_cheatcode() Function 
+<h3 class="relative group">The Vulnerable enter_cheatcode() Function 
     <div id="the-vulnerable-enter_cheatcode-function" class="anchor"></div>
     
     <span
@@ -889,7 +889,7 @@ Contains debugging symbols, making analysis easier.</p>
             style="text-decoration-line: none !important;" href="#the-vulnerable-enter_cheatcode-function" aria-label="Anchor">#</a>
     </span>        
     
-</h2>
+</h3>
 <p>Here’s the decompiled code:</p>
 <p>
     <figure>
@@ -911,7 +911,7 @@ Contains debugging symbols, making analysis easier.</p>
 <div style="border-top: 2px solid #ccc; margin: 20px 0;"></div>
 
 
-<h2 class="relative group">The cheat_mode() Function 
+<h3 class="relative group">The cheat_mode() Function 
     <div id="the-cheat_mode-function" class="anchor"></div>
     
     <span
@@ -920,7 +920,7 @@ Contains debugging symbols, making analysis easier.</p>
             style="text-decoration-line: none !important;" href="#the-cheat_mode-function" aria-label="Anchor">#</a>
     </span>        
     
-</h2>
+</h3>
 <p>This function is the goal of the exploit. It activates cheat mode and retrieves the flag:</p>
 <p>
     <figure>
@@ -945,7 +945,7 @@ Contains debugging symbols, making analysis easier.</p>
 <div style="border-top: 2px solid #ccc; margin: 20px 0;"></div>
 
 
-<h2 class="relative group">Exploitation Plan 
+<h3 class="relative group">Exploitation Plan 
     <div id="exploitation-plan" class="anchor"></div>
     
     <span
@@ -954,7 +954,7 @@ Contains debugging symbols, making analysis easier.</p>
             style="text-decoration-line: none !important;" href="#exploitation-plan" aria-label="Anchor">#</a>
     </span>        
     
-</h2>
+</h3>
 <p>Buffer Overflow:</p>
 <p>Overflow the 16-byte buffer in enter_cheatcode() to overwrite the return address.</p>
 <p>Control Parameters:</p>
@@ -966,7 +966,7 @@ Contains debugging symbols, making analysis easier.</p>
 <div style="border-top: 2px solid #ccc; margin: 20px 0;"></div>
 
 
-<h2 class="relative group">Finding the Padding 
+<h3 class="relative group">Finding the Padding 
     <div id="finding-the-padding" class="anchor"></div>
     
     <span
@@ -975,7 +975,7 @@ Contains debugging symbols, making analysis easier.</p>
             style="text-decoration-line: none !important;" href="#finding-the-padding" aria-label="Anchor">#</a>
     </span>        
     
-</h2>
+</h3>
 <p>We just need to find offset values to overflow the buffer and RBP to reach the RIP/Return address. For this, I use cyclic 100 in gdb-pwndbg and we check the register RBP register.</p>
 <p>
     <figure>
@@ -1020,7 +1020,7 @@ Contains debugging symbols, making analysis easier.</p>
 </p>
 
 
-<h2 class="relative group">Final Exploit 
+<h3 class="relative group">Final Exploit 
     <div id="final-exploit" class="anchor"></div>
     
     <span
@@ -1029,7 +1029,7 @@ Contains debugging symbols, making analysis easier.</p>
             style="text-decoration-line: none !important;" href="#final-exploit" aria-label="Anchor">#</a>
     </span>        
     
-</h2>
+</h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">pwn</span> <span class="kn">import</span> <span class="o">*</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1"># Allows you to switch between local/GDB/remote from terminal</span>
