@@ -9,6 +9,6 @@ isoCode = "en"
 rtl = false
 description = "My awesome website"
 dateFormat = "2 January 2006"
-author = { name = "w6rst", image = "img/avatar.jpeg", headline = "Certificated Proffesional Retarded Ctf Player", bio = "Certificated Proffesional Retarded Ctf Player", links = [ { github = "https://github.com/w6rstaimn" }, { x-twitter = "https://twitter.com/burufugu" } ] }
+author = { name = "w6rst", image = "img/avatar.jpeg", headline = "", bio = "", links = [ { github = "https://github.com/w6rstaimn" }, { x-twitter = "https://twitter.com/burufugu" } ] }
 logo = "pikachu.gif"
 
