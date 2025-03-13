@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Writeups on w6rst</title>
-    <link>https://w6rstaimn.github.io/writeups/</link>
+    <link>http://localhost:1313/writeups/</link>
     <description>Recent content in Writeups on w6rst</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>© 2024 w6rst</copyright>
-    <lastBuildDate>Mon, 13 Jun 2022 20:55:37 +0100</lastBuildDate><atom:link href="https://w6rstaimn.github.io/writeups/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>© 2025 w6rst</copyright>
+    <lastBuildDate>Mon, 13 Jun 2022 20:55:37 +0100</lastBuildDate><atom:link href="http://localhost:1313/writeups/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>1337UP LIVE CTF 2024</title>
-      <link>https://w6rstaimn.github.io/writeups/1337up-live-ctf/</link>
+      <link>http://localhost:1313/writeups/1337up-live-ctf/</link>
       <pubDate>Sat, 21 Dec 2024 00:00:00 +0000</pubDate>
       
-      <guid>https://w6rstaimn.github.io/writeups/1337up-live-ctf/</guid>
+      <guid>http://localhost:1313/writeups/1337up-live-ctf/</guid>
       <description>&lt;h1 class=&#34;relative group&#34;&gt;1337UP LIVE CTF 2024 Writeups 
     &lt;div id=&#34;1337up-live-ctf-2024-writeups&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -26,15 +26,15 @@
     
 &lt;/h1&gt;
 &lt;p&gt;I&amp;rsquo;ve been diving into binary exploitation for the past three months, and honestly, it&amp;rsquo;s been a wild journey! ☠️ If you don’t know, binary exploitation is all about finding bugs in programs and using them to break stuff (in a good way, of course). I got into it because I’m super into cybersecurity and hacking, and this stuff is just next level. In this post, I’ll walk you through a pwn challenge I could solve.&lt;/p&gt;</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://w6rstaimn.github.io/writeups/1337up-live-ctf/featured.png" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/writeups/1337up-live-ctf/featured.png" />
     </item>
     
     <item>
       <title>HTB University CTF 2024</title>
-      <link>https://w6rstaimn.github.io/writeups/htb-university-ctf-2024/</link>
+      <link>http://localhost:1313/writeups/htb-university-ctf-2024/</link>
       <pubDate>Fri, 20 Dec 2024 00:00:00 +0000</pubDate>
       
-      <guid>https://w6rstaimn.github.io/writeups/htb-university-ctf-2024/</guid>
+      <guid>http://localhost:1313/writeups/htb-university-ctf-2024/</guid>
       <description>&lt;h1 class=&#34;relative group&#34;&gt;HTB University CTF 2024 Writeups 
     &lt;div id=&#34;htb-university-ctf-2024-writeups&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -46,7 +46,7 @@
     
 &lt;/h1&gt;
 &lt;p&gt;Helloo. I recently participated in HTB’s University CTF 2024: Binary Badlands. Wanted to share some of my writeups for challenges I could solve. 🤡&lt;/p&gt;</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://w6rstaimn.github.io/writeups/htb-university-ctf-2024/cover.jpg" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/writeups/htb-university-ctf-2024/cover.jpg" />
     </item>
     
   </channel>

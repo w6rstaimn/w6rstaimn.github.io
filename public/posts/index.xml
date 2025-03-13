@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on w6rst</title>
-    <link>https://w6rstaimn.github.io/posts/</link>
+    <link>http://localhost:1313/posts/</link>
     <description>Recent content in Posts on w6rst</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>© 2024 w6rst</copyright>
-    <lastBuildDate>Mon, 13 Jun 2022 20:55:37 +0100</lastBuildDate><atom:link href="https://w6rstaimn.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>© 2025 w6rst</copyright>
+    <lastBuildDate>Mon, 13 Jun 2022 20:55:37 +0100</lastBuildDate><atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Cutter Installation</title>
-      <link>https://w6rstaimn.github.io/posts/cutter-installation/</link>
+      <link>http://localhost:1313/posts/cutter-installation/</link>
       <pubDate>Wed, 18 Dec 2024 00:00:00 +0000</pubDate>
       
-      <guid>https://w6rstaimn.github.io/posts/cutter-installation/</guid>
+      <guid>http://localhost:1313/posts/cutter-installation/</guid>
       <description>Cutter is an advanced, user-friendly reverse engineering platform powered by Rizin. If you&amp;rsquo;re looking to install Cutter on your Linux system, follow these simple steps.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://w6rstaimn.github.io/posts/cutter-installation/featured.png" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/cutter-installation/featured.png" />
     </item>
     
     <item>
       <title>Kali Installation</title>
-      <link>https://w6rstaimn.github.io/posts/kali-install/</link>
+      <link>http://localhost:1313/posts/kali-install/</link>
       <pubDate>Sun, 10 Nov 2024 00:00:00 +0000</pubDate>
       
-      <guid>https://w6rstaimn.github.io/posts/kali-install/</guid>
+      <guid>http://localhost:1313/posts/kali-install/</guid>
       <description>Kali Linux is an open-source distribution designed for cybersecurity professionals, ethical hackers, and penetration testers. It is Debian-derived and focused on providing over 600 tools for penetration testing and security auditing.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://w6rstaimn.github.io/posts/kali-install/featured.jpg" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/kali-install/featured.jpg" />
     </item>
     
   </channel>
