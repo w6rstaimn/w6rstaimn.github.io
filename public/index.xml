@@ -50,26 +50,6 @@
     </item>
     
     <item>
-      <title>Cutter Installation</title>
-      <link>http://localhost:1313/posts/cutter-installation/</link>
-      <pubDate>Wed, 18 Dec 2024 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/posts/cutter-installation/</guid>
-      <description>Cutter is an advanced, user-friendly reverse engineering platform powered by Rizin. If you&amp;rsquo;re looking to install Cutter on your Linux system, follow these simple steps.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/cutter-installation/featured.png" />
-    </item>
-    
-    <item>
-      <title>Kali Installation</title>
-      <link>http://localhost:1313/posts/kali-install/</link>
-      <pubDate>Sun, 10 Nov 2024 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/posts/kali-install/</guid>
-      <description>Kali Linux is an open-source distribution designed for cybersecurity professionals, ethical hackers, and penetration testers. It is Debian-derived and focused on providing over 600 tools for penetration testing and security auditing.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/kali-install/featured.jpg" />
-    </item>
-    
-    <item>
       <title>About</title>
       <link>http://localhost:1313/about/</link>
       <pubDate>Wed, 04 Sep 2024 00:00:00 +0000</pubDate>

@@ -2,7 +2,7 @@
 title: "Kali Installation"
 summary: "Kali Linux is an open-source distribution designed for cybersecurity professionals, ethical hackers, and penetration testers. It is Debian-derived and focused on providing over 600 tools for penetration testing and security auditing."
 date: 2024-11-10
-draft: false
+draft: true
 categories: ["Post","Blog",]
 description: "a description"
 tags: ["example", "tag"]

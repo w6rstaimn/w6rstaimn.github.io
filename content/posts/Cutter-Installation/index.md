@@ -2,7 +2,7 @@
 title: "Cutter Installation"
 summary: "Cutter is an advanced, user-friendly reverse engineering platform powered by Rizin. If you're looking to install Cutter on your Linux system, follow these simple steps."
 date: 2024-12-18
-draft: false
+draft: true
 description: "a description"
 tags: ["example", "tag"]
 ---
