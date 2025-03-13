@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Example on w6rst</title>
-    <link>http://localhost:1313/tags/example/</link>
+    <link>https://w6rstaimn.github.io/tags/example/</link>
     <description>Recent content in Example on w6rst</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2025 w6rst</copyright>
-    <lastBuildDate>Fri, 20 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/example/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 20 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://w6rstaimn.github.io/tags/example/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>HTB University CTF 2024</title>
-      <link>http://localhost:1313/writeups/htb-university-ctf-2024/</link>
+      <link>https://w6rstaimn.github.io/writeups/htb-university-ctf-2024/</link>
       <pubDate>Fri, 20 Dec 2024 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/writeups/htb-university-ctf-2024/</guid>
+      <guid>https://w6rstaimn.github.io/writeups/htb-university-ctf-2024/</guid>
       <description>&lt;h1 class=&#34;relative group&#34;&gt;HTB University CTF 2024 Writeups 
     &lt;div id=&#34;htb-university-ctf-2024-writeups&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -26,27 +26,7 @@
     
 &lt;/h1&gt;
 &lt;p&gt;Helloo. I recently participated in HTB’s University CTF 2024: Binary Badlands. Wanted to share some of my writeups for challenges I could solve. 🤡&lt;/p&gt;</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/writeups/htb-university-ctf-2024/cover.jpg" />
-    </item>
-    
-    <item>
-      <title>Cutter Installation</title>
-      <link>http://localhost:1313/posts/cutter-installation/</link>
-      <pubDate>Wed, 18 Dec 2024 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/posts/cutter-installation/</guid>
-      <description>Cutter is an advanced, user-friendly reverse engineering platform powered by Rizin. If you&amp;rsquo;re looking to install Cutter on your Linux system, follow these simple steps.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/cutter-installation/featured.png" />
-    </item>
-    
-    <item>
-      <title>Kali Installation</title>
-      <link>http://localhost:1313/posts/kali-install/</link>
-      <pubDate>Sun, 10 Nov 2024 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/posts/kali-install/</guid>
-      <description>Kali Linux is an open-source distribution designed for cybersecurity professionals, ethical hackers, and penetration testers. It is Debian-derived and focused on providing over 600 tools for penetration testing and security auditing.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/kali-install/featured.jpg" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://w6rstaimn.github.io/writeups/htb-university-ctf-2024/cover.jpg" />
     </item>
     
   </channel>
