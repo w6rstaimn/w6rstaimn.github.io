@@ -4,5 +4,32 @@
 
   <url>
     <loc>https://w6rstaimn.github.io/</loc>
+    <lastmod>2023-08-16T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://w6rstaimn.github.io/posts/mythirdpost/</loc>
+    <lastmod>2023-08-16T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://w6rstaimn.github.io/posts/</loc>
+    <lastmod>2023-08-16T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://w6rstaimn.github.io/posts/mysecondpost/</loc>
+    <lastmod>2023-08-15T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://w6rstaimn.github.io/posts/myfirstpost/</loc>
+    <lastmod>2023-08-14T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
   </url>
 </urlset>

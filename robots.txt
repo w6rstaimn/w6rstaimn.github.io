@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://w6rstaimn.github.io/sitemap.xml
