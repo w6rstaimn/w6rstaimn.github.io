@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Example on w6rst</title>
+    <link>https://w6rstaimn.github.io/tags/example/</link>
+    <description>Recent content in Example on w6rst</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2025 w6rst</copyright>
+    <lastBuildDate>Fri, 20 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://w6rstaimn.github.io/tags/example/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>HTB University CTF 2024</title>
+      <link>https://w6rstaimn.github.io/writeups/htb-university-ctf-2024/</link>
+      <pubDate>Fri, 20 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://w6rstaimn.github.io/writeups/htb-university-ctf-2024/</guid>
+      <description>HTB University CTF 2024</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://w6rstaimn.github.io/writeups/htb-university-ctf-2024/cover.jpg" />
+    </item>
+    
+  </channel>
+</rss>
