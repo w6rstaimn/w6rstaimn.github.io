@@ -9,35 +9,5 @@
     <copyright>© 2025 w6rst</copyright>
     <lastBuildDate>Mon, 13 Jun 2022 20:55:37 +0100</lastBuildDate><atom:link href="https://w6rstaimn.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
-    <item>
-      <title>My third post</title>
-      <link>https://w6rstaimn.github.io/posts/mythirdpost/</link>
-      <pubDate>Wed, 16 Aug 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://w6rstaimn.github.io/posts/mythirdpost/</guid>
-      <description>This is my third post on my site</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://w6rstaimn.github.io/posts/mythirdpost/featured.jpg" />
-    </item>
-    
-    <item>
-      <title>My second post</title>
-      <link>https://w6rstaimn.github.io/posts/mysecondpost/</link>
-      <pubDate>Tue, 15 Aug 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://w6rstaimn.github.io/posts/mysecondpost/</guid>
-      <description>This is my second post on my site</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://w6rstaimn.github.io/posts/mysecondpost/featured.jpg" />
-    </item>
-    
-    <item>
-      <title>My first post</title>
-      <link>https://w6rstaimn.github.io/posts/myfirstpost/</link>
-      <pubDate>Mon, 14 Aug 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://w6rstaimn.github.io/posts/myfirstpost/</guid>
-      <description>This is my first post on my site</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://w6rstaimn.github.io/posts/myfirstpost/featured.jpg" />
-    </item>
-    
   </channel>
 </rss>

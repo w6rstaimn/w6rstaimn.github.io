@@ -35,64 +35,8 @@
       <pubDate>Wed, 04 Sep 2024 00:00:00 +0000</pubDate>
       
       <guid>https://w6rstaimn.github.io/about/</guid>
-      <description>&lt;div
-  
-    class=&#34;flex px-4 py-3 rounded-md&#34;
-    style=&#34;background-color: #53659A;&#34;
-  &gt;
-
-  &lt;span
-    
-      class=&#34;ltr:pr-3 rtl:pl-3 flex items-center&#34;
-      style=&#34;color: #1d3557;&#34;
-    &gt;
-
-    
-
-  &lt;span class=&#34;relative block icon&#34;&gt;
-    &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; version=&#34;1.1&#34; xmlns:xlink=&#34;http://www.w3.org/1999/xlink&#34; width=&#34;512&#34; height=&#34;512&#34; x=&#34;0&#34; y=&#34;0&#34; viewBox=&#34;0 0 512 512&#34; style=&#34;enable-background:new 0 0 512 512&#34; xml:space=&#34;preserve&#34; class=&#34;&#34;&gt;&lt;g&gt;&lt;path d=&#34;M481.88 150.59H512v-30.12h-30.12V90.36h-30.11v30.11h-30.12v30.12h30.12v60.24h-30.12v-30.12h-30.12v-30.12H331.3v30.12h-30.12v-60.24h-30.12V60.24h30.12V30.12h-30.12V0h-30.12v30.12h-30.12v30.12h30.12v60.23h-30.12v60.24h-30.11v-30.12h-60.24v30.12H90.35v30.12H60.24v-60.24h30.11v-30.12H60.24V90.36H30.12v30.11H0v30.12h30.12v60.24H0v90.35h30.12v90.35h30.12v30.12H30.12v30.12H0v30.12h30.12V512h451.76v-30.11H512v-30.12h-30.12v-30.12h-30.11v-30.12h30.11v-90.35H512v-90.35h-30.12z&#34; fill=&#34;#000000&#34; opacity=&#34;1&#34; data-original=&#34;#000000&#34; class=&#34;&#34;&gt;&lt;/path&gt;&lt;path fill=&#34;#04a6df&#34; d=&#34;M240.939 301.175h30.11v60.24h-30.11z&#34; opacity=&#34;1&#34; data-original=&#34;#04a6df&#34;&gt;&lt;/path&gt;&lt;g fill=&#34;#ea7098&#34;&gt;&lt;path d=&#34;M391.529 210.825v-30.12h-60.24v60.24h30.12v30.11h30.12v-30.11h30.11v-30.12zM120.469 180.705v30.12h-30.12v30.12h30.12v30.11h30.11v-30.11h30.12v-60.24z&#34; fill=&#34;#ea7098&#34; opacity=&#34;1&#34; data-original=&#34;#ea7098&#34;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g fill=&#34;#ffc906&#34;&gt;&lt;path d=&#34;M451.759 240.945h-30.12v30.11h-30.11v30.12h-30.12v-30.12h-30.12v-30.11h-30.12v-60.24h-30.12v-60.24h-30.11v60.24h-30.12v60.24h-30.12v30.11h-30.12v30.12h-30.11v-30.12h-30.12v-30.11h-30.12v-30.12h-30.12v90.35h30.12v90.35h30.12v30.12h331.29v-30.12h30.12v-90.35h30.12v-90.35h-30.12zm-150.59 120.47h-30.12v30.11h-30.11v-30.11h-30.12v-60.24h30.12v-30.12h30.11v30.12h30.12zM451.759 120.465h30.12v30.12h-30.12zM30.109 451.765h451.77v30.12H30.109zM240.939 30.115h30.11v30.12h-30.11zM30.109 120.465h30.12v30.12h-30.12z&#34; fill=&#34;#ffc906&#34; opacity=&#34;1&#34; data-original=&#34;#ffc906&#34; class=&#34;&#34;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g fill=&#34;#ffeeb4&#34;&gt;&lt;path d=&#34;M391.529 331.295h30.11v30.12h-30.11zM331.289 331.295h30.12v30.12h-30.12zM150.579 331.295h30.12v30.12h-30.12zM90.349 331.295h30.12v30.12h-30.12z&#34; fill=&#34;#ffeeb4&#34; opacity=&#34;1&#34; data-original=&#34;#ffeeb4&#34;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g fill=&#34;#f58420&#34;&gt;&lt;path d=&#34;M451.759 210.825v30.12h-30.12v30.11h-30.11v30.12h-30.12v30.12h60.23v30.12h-30.11v30.11h-30.12v30.12h60.23v-30.12h30.12v-90.35h30.12v-90.35zM331.289 451.765h150.59v30.12h-150.59zM331.289 271.055h30.12v30.12h-30.12zM301.169 240.945h30.12v30.11h-30.12zM271.049 180.705h30.12v60.24h-30.12zM240.939 120.465h30.11v60.24h-30.11z&#34; fill=&#34;#f58420&#34; opacity=&#34;1&#34; data-original=&#34;#f58420&#34; class=&#34;&#34;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g fill=&#34;#ba4899&#34;&gt;&lt;path d=&#34;M391.529 210.825h30.11v30.12h-30.11zM361.409 240.945h30.12v30.11h-30.12zM361.409 180.705h30.12v30.12h-30.12zM150.579 180.705h30.12v60.24h-30.12zM120.469 240.945h30.11v30.11h-30.11z&#34; fill=&#34;#ba4899&#34; opacity=&#34;1&#34; data-original=&#34;#ba4899&#34; class=&#34;&#34;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;/svg&gt;
-  &lt;/span&gt;
-
-
-  &lt;/span&gt;
-
-  &lt;span
-    
-      class=&#34;overflow-hidden text-ellipsis whitespace-nowrap&#34;
-      style=&#34;color: #f1faee;&#34;
-    &gt;This page is under cosntruction&lt;/span&gt;
-&lt;/div&gt;</description>
+      <description></description>
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://w6rstaimn.github.io/about/cover.png" />
-    </item>
-    
-    <item>
-      <title>My third post</title>
-      <link>https://w6rstaimn.github.io/posts/mythirdpost/</link>
-      <pubDate>Wed, 16 Aug 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://w6rstaimn.github.io/posts/mythirdpost/</guid>
-      <description>This is my third post on my site</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://w6rstaimn.github.io/posts/mythirdpost/featured.jpg" />
-    </item>
-    
-    <item>
-      <title>My second post</title>
-      <link>https://w6rstaimn.github.io/posts/mysecondpost/</link>
-      <pubDate>Tue, 15 Aug 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://w6rstaimn.github.io/posts/mysecondpost/</guid>
-      <description>This is my second post on my site</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://w6rstaimn.github.io/posts/mysecondpost/featured.jpg" />
-    </item>
-    
-    <item>
-      <title>My first post</title>
-      <link>https://w6rstaimn.github.io/posts/myfirstpost/</link>
-      <pubDate>Mon, 14 Aug 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://w6rstaimn.github.io/posts/myfirstpost/</guid>
-      <description>This is my first post on my site</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://w6rstaimn.github.io/posts/myfirstpost/featured.jpg" />
     </item>
     
   </channel>
