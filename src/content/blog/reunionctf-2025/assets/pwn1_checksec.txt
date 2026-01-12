@@ -1,0 +1,7 @@
+[0;31m❯ [0mchecksec main
+    Arch:       i386-32-little
+    RELRO:        [0;33mPartial RELRO[0m
+    Stack:        [0;31mNo canary found[0m
+    NX:           [0;32mNX enabled[0m
+    PIE:          [0;31mNo PIE (0x8048000)[0m
+    Stripped:     [0;31mNo[0m

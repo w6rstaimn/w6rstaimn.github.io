@@ -1,0 +1,131 @@
+---
+import Link from '@/components/Link.astro'
+import PageHead from '@/components/PageHead.astro'
+import { SITE, SOCIAL_LINKS } from '@/consts'
+import Layout from '@/layouts/Layout.astro'
+import { getAllPosts, parseAuthors, getCombinedReadingTime } from '@/lib/data-utils'
+import { formatDate } from '@/lib/utils'
+import { Icon } from 'astro-icon/components'
+
+const posts = await getAllPosts().then((posts) => posts.slice(0, 3))
+
+const postsWithMetadata = await Promise.all(
+  posts.map(async (post) => {
+    const authors = await parseAuthors(post.data.authors)
+    const readingTime = await getCombinedReadingTime(post.id)
+    return { ...post, authors, readingTime }
+  })
+)
+---
+
+<Layout class="px-4 pt-2 pb-8 sm:pt-4 sm:pb-16 max-w-2xl mx-auto">
+  <PageHead slot="head" title="Home" />
+  
+  <section class="space-y-10">
+    <!-- Hero / Bio Section -->
+    <div class="border border-border p-5 sm:p-6 space-y-6 bg-muted/20">
+      <div class="space-y-3">
+        <div class="flex flex-col gap-0.5">
+          <div class="flex items-center gap-1 text-foreground/80">
+             <span class="text-[10px] font-bold tracking-tight">••••</span>
+          </div>
+          <h1 class="text-xl font-mono">
+            /{SITE.title}/ • <span class="text-muted-foreground italic text-lg whitespace-nowrap">noun</span>
+          </h1>
+        </div>
+        
+        <div class="prose prose-neutral dark:prose-invert font-mono text-[13px] leading-relaxed text-muted-foreground max-w-none">
+          <p>
+            <span class="text-foreground/80">{SITE.title} (pronounced "worst")</span> — {SITE.description}. Blog for sharing binary exploitation knowledge.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Latest Posts Section -->
+    <div class="space-y-6">
+      <h2 class="text-xl font-bold text-foreground">Latest posts</h2>
+      
+      <div class="space-y-5">
+        {postsWithMetadata.map(post => (
+          <div class="border border-border p-4 hover:border-foreground/30 transition-colors bg-muted/5">
+            <div class="flex flex-col sm:flex-row gap-4">
+              {post.data.imageWithoutText && (
+                <div class="w-full sm:w-1/4 shrink-0">
+                  <Link href={`/blog/${post.id}`} class="block aspect-video overflow-hidden border border-border">
+                    <img 
+                      src={post.data.imageWithoutText.src} 
+                      alt={post.data.title} 
+                      class="size-full object-cover transition-transform group-hover:scale-105"
+                    />
+                  </Link>
+                </div>
+              )}
+              <div class="flex-1 space-y-3">
+                <Link href={`/blog/${post.id}`} class="group space-y-1 block">
+                  <h3 class="text-lg font-extrabold group-hover:text-primary transition-colors leading-tight">
+                    {post.data.title}
+                  </h3>
+                  <p class="text-[13px] text-muted-foreground leading-snug line-clamp-2">
+                    {post.data.description}
+                  </p>
+                </Link>
+
+                <div class="flex flex-wrap items-center gap-y-2 gap-x-4 text-[11px] text-muted-foreground pt-1">
+                   <!-- Authors -->
+                   <div class="flex items-center gap-2">
+                     <div class="flex -space-x-1.5">
+                       {post.authors.map(author => (
+                         <img 
+                           src={author.avatar} 
+                           alt={author.name} 
+                           class="size-5 rounded-full border border-background bg-muted"
+                         />
+                       ))}
+                     </div>
+                     <span>{post.authors.map(a => a.name).join(', ')}</span>
+                   </div>
+
+                   <!-- Date -->
+                   <div class="flex items-center gap-1">
+                     <span>{formatDate(post.data.date)}</span>
+                   </div>
+
+                   <!-- Reading Time -->
+                   <div class="flex items-center gap-1">
+                     <span>{post.readingTime}</span>
+                   </div>
+                </div>
+
+                <!-- Tags -->
+                {post.data.tags && (
+                  <div class="flex flex-wrap gap-1.5 pt-1">
+                    {post.data.tags.map(tag => (
+                      <Link 
+                        href={`/blog/tag/${tag}`}
+                        class="border border-border px-1.5 py-0.5 rounded-sm hover:border-foreground/30 hover:text-foreground transition-all text-[9.5px] font-mono flex items-center gap-0.5 text-muted-foreground"
+                      >
+                        <span class="opacity-70">#</span>
+                        {tag}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="flex justify-center pt-4">
+        <Link 
+          href="/blog" 
+          class="text-xs font-medium hover:text-foreground transition-colors flex items-center gap-1.5 text-muted-foreground underline underline-offset-4"
+        >
+          See all posts
+          <Icon name="lucide:move-right" class="size-3.5" />
+        </Link>
+      </div>
+    </div>
+  </section>
+</Layout>

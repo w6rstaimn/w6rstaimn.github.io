@@ -1,0 +1,37 @@
+---
+import Link from '@/components/Link.astro'
+import { NAV_LINKS } from '@/consts'
+import { cn } from '@/lib/utils'
+import { Image } from 'astro:assets'
+import logo from '../../public/static/logo.png'
+import { Icon } from 'astro-icon/components'
+---
+
+<header transition:persist>
+  <div
+    class="mx-auto flex max-w-3xl items-center justify-between gap-4 px-4 py-3"
+  >
+    <Link href="/" class="flex shrink-0">
+      <Image src={logo} alt="Logo" class="size-6 sm:size-7 rounded-full border border-border" />
+    </Link>
+    <div class="flex items-center gap-4">
+      <nav class="flex items-center gap-6 text-sm">
+        {
+          NAV_LINKS.map((item) => (
+            <Link
+              href={item.href}
+              class={cn(
+                'text-muted-foreground hover:text-foreground transition-colors',
+              )}
+            >
+              {item.label}
+            </Link>
+          ))
+        }
+        <button class="text-muted-foreground hover:text-foreground transition-colors ml-2">
+            <Icon name="lucide:moon" class="size-4" />
+        </button>
+      </nav>
+    </div>
+  </div>
+</header>
