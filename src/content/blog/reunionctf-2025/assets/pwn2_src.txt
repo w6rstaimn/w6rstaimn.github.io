@@ -1,0 +1,163 @@
+undefined8 main(void)
+
+{
+  int iVar1;
+  undefined8 uVar2;
+  long in_FS_OFFSET;
+  uint local_12c;
+  int local_128;
+  int local_124;
+  FILE *local_120;
+  char local_118 [264];
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  local_12c = 1000;
+  setup_game();
+  display_title();
+  do {
+    printf("Your coins : %d\n",(ulong)local_12c);
+    printf("1. Equipment shop\n2. Complete purchase\n3. Donate to guild\n> ");
+    __isoc99_scanf(&DAT_0010224d,&local_124);
+    puts("");
+    if (local_124 == 1) {
+      purchase_equipment(&local_12c);
+    }
+    else if (local_124 == 2) {
+      if ((((shadow != 0) && (abyss != 0)) && (dragon != 0)) && ((celestial != 0 && (phantom != 0)) )
+         ) {
+        local_120 = fopen("flag.txt","r");
+        if (local_120 == (FILE *)0x0) {
+          puts("Flag file missing!");
+          uVar2 = 0xffffffff;
+        }
+        else {
+          fgets(local_118,0x100,local_120);
+          fclose(local_120);
+          printf("Here is your flag : %s\n",local_118);
+          uVar2 = 0x539;
+        }
+        if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+          __stack_chk_fail();
+        }
+        return uVar2;
+      }
+      puts("Fail!");
+    }
+    else if (local_124 == 3) {
+      printf("How much do you want to donate?\n> ");
+      __isoc99_scanf(&DAT_0010224d,&local_128);
+      iVar1 = local_128;
+      if (local_128 < 0) {
+        iVar1 = 0;
+      }
+      local_12c = local_12c - iVar1;
+    }
+    puts("");
+  } while( true );
+}
+
+
+void setup_game(void)
+
+{
+  long lVar1;
+  long in_FS_OFFSET;
+  
+  lVar1 = *(long *)(in_FS_OFFSET + 0x28);
+  setvbuf(stdin,(char *)0x0,2,0);
+  setvbuf(stdout,(char *)0x0,2,0);
+  setvbuf(stderr,(char *)0x0,2,0);
+  alarm(0x3c);
+  if (lVar1 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return;
+}
+
+
+void display_title(void)
+
+{
+  long lVar1;
+  long in_FS_OFFSET;
+  
+  lVar1 = *(long *)(in_FS_OFFSET + 0x28);
+  puts("  __  __ __  __  ___  ____  ____   ____ ");
+  puts(" |  \\/  |  \\/  |/ _ \\|  _ \\|  _ \\ / ___|");
+  puts(" | |\\/| | |\\/| | | | | |_) | |_) | |  _ ");
+  puts(" | |  | | |  | | |_| |  _ <|  _ <| |_| |");
+  puts(" |_|  |_|_|  |_|\\___/|_| \\_\\_| \\_\\\\____|");
+  puts("                                        ");
+  if (lVar1 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return;
+}
+
+
+undefined4 purchase_equipment(int *param_1)
+
+{
+  long in_FS_OFFSET;
+  undefined4 local_18;
+  undefined4 local_14;
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  local_14 = 0;
+  puts("1. Shadowweave Plate [400446]");
+  puts("2. Abyssal Guardian Set [1650]");
+  puts("3. Dragonlord\'s Regalia [20450]");
+  puts("4. Celestial Light Armor [42847]");
+  puts("5. Phantom Veil Cloak [950]");
+  printf("Choose what you want to buy : ");
+  __isoc99_scanf(&DAT_001021df,&local_18);
+  switch(local_18) {
+  default:
+    local_14 = 0;
+    break;
+  case 1:
+    local_14 = 400446;
+    if (400445 < *param_1) {
+      shadow = 1;
+      *param_1 = *param_1 + -400446;
+    }
+    break;
+  case 2:
+    local_14 = 1650;
+    if (1649 < *param_1) {
+      abyss = 1;
+      *param_1 = *param_1 + -1650;
+    }
+    break;
+  case 3:
+    local_14 = 20450;
+    if (20449 < *param_1) {
+      dragon = 1;
+      *param_1 = *param_1 + -20450;
+    }
+    break;
+  case 4:
+    local_14 = 0xa75f;
+    if (0xa75e < *param_1) {
+      celestial = 1;
+      *param_1 = *param_1 + -0xa75f;
+    }
+    break;
+  case 5:
+    local_14 = 0x3b6;
+    if (0x3b5 < *param_1) {
+      phantom = 1;
+      *param_1 = *param_1 + -0x3b6;
+    }
+  }
+  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return local_14;
+}

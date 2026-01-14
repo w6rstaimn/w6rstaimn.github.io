@@ -1,8 +1,8 @@
 ---
-title: 'Pwn'
+title: 'oldschool'
 description: 'A simple pwn challenge involving a stack pivot and a format string leak.'
 date: 2026-01-12
-tags: ['ctf', 'pwn', 'stack-pivot', 'format-string', 'binary-exploitation']
+tags: ['stack-pivot', 'format-string']
 authors: ['w6rst']
 order: 0
 ---
@@ -13,12 +13,12 @@ import Callout from '@/components/mdx/Callout.astro'
 import pwn1_checksec from './assets/pwn1_checksec.txt?raw'
 import pwn1_tele from './assets/pwn1_tele.txt?raw'
 
-## pwn
+## oldschool
 
 <Challenge
   category="pwn"
   files={['main', 'main.c', 'Dockerfile']}
-  description="simple pwn... no trickery needed..."
+  description="learn to pwn with this easy challenge!"
 />
 
 Inspecting the binary with `checksec`:
@@ -71,7 +71,7 @@ The binary was compiled in a way that the `main(){:c}` function performs a stack
 
 Looking at the disassembly of the `main(){:c}` function's epilogue:
 
-```nasm
+```txt
 pop    ecx
 pop    ebx
 pop    ebp
@@ -151,7 +151,7 @@ io.sendlineafter(b'magic words: ', payload)
 
 When `main(){:c}` returns, the stack pivots to our buffer, and the `win(){:c}` function is called with the required password argument, spawning our shell.
 
-## Final Exploit
+### Exploit Script
 
 ```python
 from pwn import *

