@@ -141,7 +141,7 @@ Now that we know the bug, let’s move to the exploitation part.
 
 ## Exploitation
 
-### 1. PIE & Heap Recovery
+### 1. pie and heap leaks
 1.  **PIE Leak**: Allocate a note. Since `DEFAULT_TAG` is always written to the end of the note, we can call `read_note` to retrieve the address of the tag. Subtracting the known offset (`0x2008`) gives us the binary's base address.
 2.  **Heap Leak**: Free the note. On Glibc 2.32+, the `next` pointer is mangled. By reading the freed chunk, we leak `(chunk_addr >> 12) ^ 0`, giving us the **Heap Key**.
 
@@ -153,7 +153,6 @@ Even on the newest Glibc, the tcache poisoning strategy remains effective if we 
 3.  **Overwrite**: Use the UAF `edit` to overwrite the head of the tcache with our `protected_fd`.
 4.  **Land**: Allocate twice. The second allocation returns a pointer to the global `admin_key`.
 
-### 3. Identity Theft
 Overwrite the `admin_key` with the secret string `"VASILIY_SECRET\x00"` and trigger the check to claim the flag.
 
 ### Exploit Script
