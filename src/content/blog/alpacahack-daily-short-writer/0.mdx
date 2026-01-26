@@ -18,8 +18,8 @@ import exploit from './assets/exploit.py?raw'
 
 <Challenge
   category="pwn"
-  files={['chal', 'main.c', 'Dockerfile', 'exploit.py']}
-  description="Can you overwrite the return address with just a short write?"
+  files={['chal', 'main.c', 'Dockerfile']}
+  description="The revenge round of Integer Writer"
 />
 
 ## Program Analysis
@@ -78,7 +78,7 @@ or
 0
 ```
 
-Since PIE is enabled, the only viable spot to exploit is the `__isoc99_scanf(){:c}` return address, which normally returns to `main+***`.
+With PIE enabled, all addresses are randomized at runtime, and Full RELRO prevents GOT overwrites by marking it read-only. Therefore, the only viable exploitation target is the return address of `__isoc99_scanf(){:c}`, which typically returns to `main+***`.
 
 ### Debugging with Pwndbg
 
